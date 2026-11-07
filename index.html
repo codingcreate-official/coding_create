@@ -1423,6 +1423,8 @@ public class Person implements SaySomething {
 <div class="lines">
 <div id="cin-box">
   <div class="cin-screen" id="cin-screen"><div class="cin-empty">🎬<br>الفيديو هيتضاف قريباً</div></div>
+  <button type="button" class="cin-report" id="cin-report" aria-expanded="false">🚩 الإبلاغ عن حقوق الطبع والنشر</button>
+  <div class="cin-joke" id="cin-joke" hidden><div class="cin-j1">🐦 عايز تبلغ عني ليه يا عصفور؟!</div><div class="cin-j2">روح ربنا يهديكم 🤲😂</div><button type="button" class="cin-back" id="cin-back">خلاص هسيبه ينفع الناس 😇</button></div>
 </div>
 </div>
 <div class="sig"><span><span class="lt">eng mahmoud mohamed</span></span><small><span class="lt">Coding Create</span> · <span class="lt">Code. Create. Inspire</span>.</small></div>
@@ -1743,6 +1745,12 @@ nav .nl a{padding:6px 12px !important;font-size:14px !important}
 .cin-menu button{min-width:48px;height:32px;border:0;border-radius:8px;background:rgba(255,255,255,.15);color:#fff;font:700 13px system-ui,sans-serif;cursor:pointer;padding:0 8px}
 .cin-menu button.on{background:linear-gradient(135deg,#ff2e93,#a23cf0)}.cin-menu button.bad{opacity:.45;text-decoration:line-through}
 .cin-note{font-size:12px;color:#ffd9a0;line-height:1.6;margin-bottom:6px}
+.cin-report{display:block;margin:14px auto 0;padding:9px 16px;border:2px dashed var(--red,#d62839);border-radius:10px;background:#fff;color:var(--red,#d62839);font:800 15px/1.2 var(--ar,system-ui,sans-serif);cursor:pointer}
+.cin-report:hover{background:rgba(214,40,57,.08)}
+.cin-joke{margin:12px auto 0;max-width:560px;padding:14px 16px;text-align:center;border:2.5px solid var(--c-pink,#ff2e93);border-radius:14px 6px 16px 8px/8px 16px 6px 14px;background:rgba(255,46,147,.06);box-shadow:3px 3px 0 rgba(162,60,240,.22)}
+.cin-j1{font:800 20px/1.6 var(--ar,system-ui,sans-serif);color:var(--navy,#14224f)}
+.cin-j2{font:800 18px/1.8 var(--ar,system-ui,sans-serif);color:var(--c-pink,#ff2e93)}
+.cin-back{margin-top:8px;padding:7px 14px;border:0;border-radius:99px;background:var(--navy,#14224f);color:#fff7e6;font:700 14px/1.2 var(--ar,system-ui,sans-serif);cursor:pointer}
 .cin-open{display:inline-block;margin-top:12px;padding:8px 16px;border-radius:10px;background:var(--navy,#14224f);color:#fff7e6;text-decoration:none;font:700 15px/1 var(--ar,system-ui,sans-serif)}
 .cin-open[hidden]{display:none}
 </style>
@@ -1794,6 +1802,11 @@ nav .nl a{padding:6px 12px !important;font-size:14px !important}
     else if(a==='mute'){if(P.isMuted()){P.unMute();b.textContent='🔊'}else{P.mute();b.textContent='🔇'}}
     else if(a==='fs'){var d=document;if(d.fullscreenElement||d.webkitFullscreenElement){(d.exitFullscreen||d.webkitExitFullscreen).call(d)}else{(sc.requestFullscreen||sc.webkitRequestFullscreen).call(sc)}}
   });
+})();
+
+(function(){var r=document.getElementById('cin-report'),j=document.getElementById('cin-joke'),b=document.getElementById('cin-back');if(!r)return;
+  r.addEventListener('click',function(){j.hidden=false;r.setAttribute('aria-expanded','true');j.scrollIntoView({block:'nearest',behavior:'smooth'})});
+  b.addEventListener('click',function(){j.hidden=true;r.setAttribute('aria-expanded','false')});
 })();
 </script>
 <style id="pen-polish">
