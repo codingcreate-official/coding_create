@@ -2634,10 +2634,11 @@ update instructor
       <div class="cin-valance"></div>
       <div class="cin-curtain l"></div><div class="cin-curtain r"></div>
       <div class="cin-frame">
-        <div class="cin-screen" id="cin-screen"><div class="cin-empty">🎬<br>الفيديو هيتضاف قريباً</div></div>
+        <div class="cin-duo"><div class="cin-screen act" id="cin-screen"><div class="cin-empty">🎬<br>الفيديو هيتضاف قريباً</div></div><div class="cin-screen" id="cin-screen2"><div class="cin-empty">🎬<br>الفيديو هيتضاف قريباً</div></div></div>
       </div>
       <div class="cin-stagefloor"></div>
     </div>
+    <div class="cin-pick" id="cin-pick"><button type="button" data-i="0" class="on">🎬 الفيديو 1</button><button type="button" data-i="1">🎬 الفيديو 2</button></div>
     <div class="cin-beam"></div>
     <div class="cin-dusts"></div>
     <div class="cin-seats"></div>
@@ -3203,10 +3204,10 @@ nav .nl a{padding:6px 12px !important;font-size:14px !important}
 </style>
 <script>
 /* سينما الكود: مشغل محمي بأزرار خاصة (مفيش أي واجهة يوتيوب ظاهرة ومفيش كليك يوصل ليوتيوب) */
-(function(){
-  var sc=document.getElementById('cin-screen');if(!sc)return;
+function cinMake(sc,enc){
+  if(!sc)return;
   if(location.protocol==='file:'){sc.innerHTML='<div class="cin-empty">🎬<br>الفيديو بيشتغل بس لما الصفحة تتفتح من موقع (رابط https)<br>مش من ملف على الجهاز</div>';return;}
-  var id=atob('c3lkckJNLXlPZ20=').split('').reverse().join('');
+  var id=atob(enc).split('').reverse().join('');
   var src='https://www.youtube-nocookie.com/embed/'+id+'?controls=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&fs=0&playsinline=1&cc_load_policy=0&enablejsapi=1&origin='+encodeURIComponent(location.origin);
   sc.innerHTML='<iframe title="سينما الكود" sandbox="allow-scripts allow-same-origin allow-presentation" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" src="'+src+'"></iframe>'
    +'<div class="cin-hit"></div><div class="cin-cover"><button class="cin-big" aria-label="تشغيل">▶</button></div>'
@@ -3217,8 +3218,9 @@ nav .nl a{padding:6px 12px !important;font-size:14px !important}
   function setUI(st){var pl=(st===1||st===3);cover.classList.toggle('off',pl);pb.textContent=pl?'❚❚':'▶'}
   function tick(){if(!P||!P.getDuration||drag)return;var d=P.getDuration(),c=P.getCurrentTime();if(d>0){seek.value=Math.round(c/d*1000);tm.textContent=fmt(c)+' / '+fmt(d)}}
   function toggle(){if(!P)return;var st=P.getPlayerState();(st===1||st===3)?P.pauseVideo():P.playVideo()}
+  sc._pause=function(){try{if(P&&P.pauseVideo)P.pauseVideo()}catch(x){}};
   function init(){P=new YT.Player(fr,{events:{onReady:function(){setInterval(tick,300);try{P.setPlaybackQuality('hd1080')}catch(x){}},onStateChange:function(e){setUI(e.data)},onError:function(e){cover.classList.remove('off');cover.innerHTML='<div class="cin-empty" style="font-size:18px">تعذر تشغيل الفيديو (كود '+e.data+')<br>تأكد إن Allow embedding شغّال للفيديو</div>'}}})}
-  if(window.YT&&YT.Player)init();else{var old=window.onYouTubeIframeAPIReady;window.onYouTubeIframeAPIReady=function(){if(old)old();init()};var t=document.createElement('script');t.src='https://www.youtube.com/iframe_api';document.head.appendChild(t)}
+  if(window.YT&&YT.Player)init();else{var old=window.onYouTubeIframeAPIReady;window.onYouTubeIframeAPIReady=function(){if(old)old();init()};if(!window.__ytLoading){window.__ytLoading=1;var t=document.createElement('script');t.src='https://www.youtube.com/iframe_api';document.head.appendChild(t)}}
   function build(){
     var ok=P.getAvailableRateList?P.getAvailableRateList():[],mx=ok&&ok.length?Math.max.apply(null,ok):0;
     var L=['auto'].concat((P.getAvailableQualityLevels()||[]).filter(function(x){return x!=='auto'}));
@@ -3249,7 +3251,14 @@ nav .nl a{padding:6px 12px !important;font-size:14px !important}
     else if(a==='mute'){if(P.isMuted()){P.unMute();b.textContent='🔊'}else{P.mute();b.textContent='🔇'}}
     else if(a==='fs'){var d=document;if(d.fullscreenElement||d.webkitFullscreenElement){(d.exitFullscreen||d.webkitExitFullscreen).call(d)}else{(sc.requestFullscreen||sc.webkitRequestFullscreen).call(sc)}}
   });
-})();
+}
+cinMake(document.getElementById('cin-screen'),'c3lkckJNLXlPZ20=');
+cinMake(document.getElementById('cin-screen2'),'Y1NYS2p2N3Foa2g=');
+(function(){var pk=document.getElementById('cin-pick');if(!pk)return;var scr=[document.getElementById('cin-screen'),document.getElementById('cin-screen2')];
+  pk.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var i=+b.dataset.i;
+    scr.forEach(function(s,k){if(k!==i&&s._pause)s._pause();s.classList.toggle('act',k===i)});
+    [].forEach.call(pk.children,function(x,k){x.classList.toggle('on',k===i)});
+    window.dispatchEvent(new Event('resize'))})})();
 
 (function(){var r=document.getElementById('cin-report'),j=document.getElementById('cin-joke'),b=document.getElementById('cin-back');if(!r)return;
   r.addEventListener('click',function(){j.hidden=false;r.setAttribute('aria-expanded','true');j.scrollIntoView({block:'nearest',behavior:'smooth'})});
@@ -3257,6 +3266,11 @@ nav .nl a{padding:6px 12px !important;font-size:14px !important}
 })();
 </script>
 <style id="cin-pro">
+.cin-duo .cin-screen:not(.act){display:none}
+.cin-pick{position:relative;z-index:7;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:12px 10px;background:linear-gradient(#0b0516,#05030a);direction:rtl}
+.cin-pick button{padding:9px 20px;border:2px solid #ffc21a;border-radius:99px;background:rgba(255,255,255,.08);color:#ffd9a0;font:800 15px/1.2 var(--ar,system-ui,sans-serif);cursor:pointer}
+.cin-pick button.on{background:linear-gradient(135deg,#ff2e93,#a23cf0);color:#fff;border-color:#fff7e6}
+
 #cin-box{margin:18px 0 8px}
 #cin-box .cin-hall{position:relative;border-radius:20px;overflow:hidden;isolation:isolate;direction:ltr;
   background:radial-gradient(ellipse 80% 60% at 50% 22%,#3a1f5e 0,#190d30 50%,#07040f 100%);
@@ -3345,9 +3359,9 @@ nav .nl a{padding:6px 12px !important;font-size:14px !important}
   for(var k=0;k<18;k++){var p=document.createElement('span');p.className='cin-dust';
     var z=1+Math.random()*2;p.style.cssText='left:'+(Math.random()*100)+'%;width:'+z+'px;height:'+z+'px;--dx:'+((Math.random()*40)-20)+'px;animation-duration:'+(5+Math.random()*6)+'s;animation-delay:'+(-Math.random()*8)+'s';
     d.appendChild(p)}
-  var cover=hall.querySelector('.cin-cover');
-  function sync(){hall.classList.toggle('playing',!!cover&&cover.classList.contains('off'))}
-  if(cover){new MutationObserver(sync).observe(cover,{attributes:true,attributeFilter:['class']});sync()}
+  var covers=[].slice.call(hall.querySelectorAll('.cin-cover'));
+  function sync(){hall.classList.toggle('playing',covers.some(function(c){return c.classList.contains('off')}))}
+  covers.forEach(function(c){new MutationObserver(sync).observe(c,{attributes:true,attributeFilter:['class']})});sync()
 })();
 </script>
 <style id="pen-polish">
