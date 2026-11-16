@@ -427,576 +427,819 @@ li[dir=ltr]{text-align:left}
 <h2 class="sec"><span class="en">Course 4 – DFD</span></h2>
 <div class="tw"><table><tr><th>الموضوع</th><th>أهم نقطة</th></tr><tr><td><span class="en">DFD</span></td><td>بتمثل النظام من منظور <span class="en">functional</span></td></tr><tr><td><span class="en">Context diagram</span></td><td><span class="en">level 0: process</span> واحدة + <span class="en">external entities</span></td></tr><tr><td><span class="en">External entity</span></td><td><span class="en">box</span>، <b><span class="en">source</span></b> أو <b><span class="en">sink</span></b></td></tr><tr><td><span class="en">Process</span></td><td><span class="en">bubble</span>، اسمها فعل بسيط</td></tr><tr><td><span class="en">Data store</span></td><td><span class="en">open box</span>، اسمه <span class="en">noun</span></td></tr><tr><td><span class="en">Guidelines</span></td><td>متمثلش <span class="en">procedural logic</span>، وسمّي كل الأسهم، والـ <span class="en">ratio</span> حوالي <span class="en">1:5</span> <span class="n">فخ</span></td></tr></table></div>
 <h2 class="sec"><span class="en">Course 5 – Use Case Diagram</span></h2><div class="tw"><table><tr><th>الموضوع</th><th>أهم نقطة</th></tr><tr><td><span class="en">Actor</span> أنواع</td><td><span class="en">Users</span> • <span class="en">Other systems</span> • <span class="en">Time</span></td></tr><tr><td><span class="en">Use case</span></td><td>بيركز على السيستم <b>يعمل إيه</b> مش إزاي <span class="n">فخ</span></td></tr><tr><td><span class="en">Flows</span></td><td><span class="en">Primary</span> (happy day) • <span class="en">Alternate</span> (مش خطأ) • <span class="en">Error</span></td></tr><tr><td><span class="en">Association</span></td><td>كل <span class="en">use case</span> لازم <span class="en">actor</span> يبدأه إلا في <span class="en">include/extend</span></td></tr><tr><td><span class="en">Include</span></td><td>دايماً بيستخدمه • السهم من الأساسي للـ <span class="en">included</span></td></tr><tr><td><span class="en">Extend</span></td><td>اختياري/ظروف خاصة • السهم من الـ <span class="en">extension</span> للـ <span class="en">extended</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Generalization</span></td><td>العلاقة الوحيدة بين الـ <span class="en">actors</span> • سهم بمثلث فاضي</td></tr><tr><td><span class="en">Abstract use case</span></td><td>مش بيبدأه <span class="en">actor</span>، بيشارك في <span class="en">include/extend</span></td></tr></table></div>
+<h2 class="sec">فخاخ <span class="en">Lecture 1</span> – السوفت وير وهندسته</h2><div class="tw"><table><tr><th>الموضوع</th><th>أهم نقطة</th></tr><tr><td><span class="en">Software</span> = برنامج بس؟</td><td>لأ. الـ <span class="en">Software</span> = <span class="en">Programs</span> + <span class="en">Data structures</span> + <span class="en">Documentation.</span> الـ <span class="en">Documentation</span> جزء من التعريف، فاللي يقول كود بس غلط. <span class="n">فخ</span></td></tr><tr><td><span class="en">Embedded vs System software</span></td><td>الاتنين نوعين منفصلين في الـ <span class="en">Application Domains.</span> الـ <span class="en">System</span> زي نظام التشغيل، والـ <span class="en">Embedded</span> مدمج جوه جهاز. متخلطش بينهم. <span class="n">فخ</span></td></tr><tr><td><span class="en">Why must software change</span>؟ اربط السبب بالفعل</td><td><span class="en">Adapted</span> = بيئة أو تكنولوجيا جديدة • <span class="en">Enhanced</span> = <span class="en">business requirements</span> جديدة • <span class="en">Extended</span> = يتوافق (<span class="en">interoperable</span>) مع أنظمة وقواعد بيانات أحدث • <span class="en">Re-architected</span> = يشتغل في بيئة شبكة. الفخ في الخلط بين <span class="en">Enhanced</span> و <span class="en">Extended.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">IEEE definition</span> – 3 حاجات</td><td>الأسلوب <span class="en">systematic</span> + <span class="en">disciplined</span> + <span class="en">quantifiable</span>، وبيغطي <span class="en">development</span> و <span class="en">operation</span> و <span class="en">maintenance.</span> الفخ إنهم يشيلوا الـ <span class="en">maintenance</span> أو يستبدلوا كلمة. <span class="n">فخ</span></td></tr><tr><td><span class="en">Umbrella vs Framework activities</span></td><td><span class="en">Umbrella</span> (طول المشروع): <span class="en">Risk management</span> • <span class="en">SQA</span> • <span class="en">Technical reviews</span> • <span class="en">Measurement</span> • <span class="en">SCM</span> • <span class="en">Project tracking</span> • <span class="en">Reusability management</span> • <span class="en">Work product preparation. Framework</span>: <span class="en">Communication</span> • <span class="en">Planning</span> • <span class="en">Modeling</span> • <span class="en">Construction</span> • <span class="en">Deployment.</span> الـ <span class="en">Risk management</span> و <span class="en">SQA</span> مش <span class="en">Framework.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Construction</span> فيه إيه؟</td><td>الـ <span class="en">Construction</span> = <span class="en">Code generation</span> + <span class="en">Testing.</span> والـ <span class="en">Modeling</span> = <span class="en">Analysis of requirements</span> + <span class="en">Design.</span> الفخ إن الـ <span class="en">Testing</span> ينسبوه للـ <span class="en">Deployment.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Polya</span> – كل خطوة بتقابل إيه؟</td><td><span class="en">Understand the problem</span> = <span class="en">communication</span> + <span class="en">analysis</span> • <span class="en">Plan a solution</span> = <span class="en">modeling</span> + <span class="en">design</span> • <span class="en">Carry out the plan</span> = <span class="en">code generation</span> • <span class="en">Examine the result</span> = <span class="en">testing</span> + <span class="en">quality assurance.</span> الـ <span class="en">Testing</span> تبع <span class="en">Examine</span> مش <span class="en">Carry out.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Software costs</span> – الأرقام</td><td><span class="en">Roughly</span> 60% <span class="en">development</span> و 40% <span class="en">testing</span> (مش <span class="en">maintenance</span>). وفي الـ <span class="en">custom software</span> الـ <span class="en">evolution costs</span> غالباً بتعدي الـ <span class="en">development.</span> وفي الأنظمة طويلة العمر الـ <span class="en">maintenance</span> ممكن يبقى عدة أضعاف التطوير. <span class="n">فخ</span></td></tr><tr><td>طرق إنشاء <span class="en">Software</span> جديد – 3</td><td>نطوّر برامج جديدة • نعمل <span class="en">configure</span> لنظام <span class="en">generic</span> • نعيد استخدام (<span class="en">reuse</span>) سوفت وير موجود. الـ <span class="en">configuring</span> مش بيتعد تطوير من الصفر. <span class="n">فخ</span></td></tr><tr><td><span class="en">SE vs System engineering</span></td><td>الـ <span class="en">System engineering</span> أوسع: <span class="en">hardware</span> + <span class="en">software</span> + <span class="en">process.</span> والـ <span class="en">SE</span> جزء منها (<span class="en">infrastructure</span> و <span class="en">control</span> و <span class="en">applications</span> و <span class="en">databases</span>). ومهندس النظم هو اللي بيعمل <span class="en">system specification</span> و <span class="en">architectural design</span> و <span class="en">integration</span> و <span class="en">deployment.</span> <span class="n">فخ</span></td></tr><tr><td>الأنشطة الـ 4 – اسم بيتغير بين المحاضرتين</td><td><span class="en">Lecture</span> 1: <span class="en">Specification</span> • <span class="en">Development</span> • <span class="en">Validation</span> • <span class="en">Evolution. Lecture</span> 2: <span class="en">Specification</span> • <span class="en">Design and implementation</span> • <span class="en">Validation</span> • <span class="en">Evolution.</span> الاسم التاني بيتكتب <span class="en">Development</span> مرة و <span class="en">Design</span> مرة. <span class="n">فخ</span></td></tr><tr><td><span class="en">Generic process models</span> – الاسم التاني</td><td><span class="en">Lecture</span> 1: <span class="en">Waterfall</span> • <span class="en">Iterative development</span> • <span class="en">Component-based. Lecture</span> 2: <span class="en">Waterfall</span> • <span class="en">Evolutionary development</span> • <span class="en">Component-based.</span> الاسم الأوسط بيختلف حسب الشريحة. <span class="n">فخ</span></td></tr><tr><td><span class="en">Process model perspectives</span> – 3</td><td><span class="en">Workflow</span> = تسلسل الأنشطة • <span class="en">Data-flow</span> = حركة المعلومات • <span class="en">Role/action</span> = مين بيعمل إيه. الفخ في توزيع التعريفات على الأسماء. <span class="n">فخ</span></td></tr><tr><td><span class="en">SE methods</span> – 4 مكونات</td><td><span class="en">Model descriptions</span> (الرسومات اللي لازم تتعمل) • <span class="en">Rules</span> (قيود على الـ <span class="en">models</span>) • <span class="en">Recommendations</span> (نصايح تصميم كويس) • <span class="en">Process guidance</span> (الأنشطة اللي نمشي عليها). الـ <span class="en">Rules</span> = <span class="en">constraints</span> مش نصايح. <span class="n">فخ</span></td></tr><tr><td><span class="en">CASE</span> = أدوات مش نموذج</td><td>الـ <span class="en">CASE</span> = <span class="en">software systems</span> بتدعم أنشطة الـ <span class="en">process</span> آلياً، وغالباً بتتستخدم لدعم الـ <span class="en">methods.</span> مش <span class="en">process model</span> زي <span class="en">Waterfall.</span> الـ <span class="en">Upper</span> للمراحل المبكرة والـ <span class="en">Lower</span> للمتأخرة. <span class="n">فخ</span></td></tr><tr><td><span class="en">Acceptability</span> ولا <span class="en">Usability</span>؟</td><td>الشريحة الأولى: <span class="en">Maintainability</span> • <span class="en">Dependability</span> • <span class="en">Efficiency</span> • <span class="en">Acceptability.</span> وشريحة <span class="en">Key points</span>: <span class="en">Maintainability</span> • <span class="en">Dependability</span> • <span class="en">Efficiency</span> • <span class="en">Usability.</span> والـ <span class="en">Acceptability</span> = <span class="en">understandable</span> + <span class="en">usable</span> + <span class="en">compatible</span> مع أنظمة تانية. <span class="n">فخ</span></td></tr><tr><td><span class="en">Challenges</span> – كل واحد معناه</td><td><span class="en">Heterogeneity</span> = منصات وبيئات تشغيل مختلفة • <span class="en">Delivery</span> = تسليم أسرع • <span class="en">Trust</span> = نثبت إن المستخدمين يقدروا يثقوا في السوفت وير. <span class="n">فخ</span></td></tr><tr><td><span class="en">Ethics</span> – السرية</td><td>الـ <span class="en">Confidentiality</span> واجبة حتى لو مفيش <span class="en">confidentiality agreement</span> موقّعة. والسلوك الأخلاقي أكتر من مجرد احترام القانون. <span class="n">فخ</span></td></tr><tr><td><span class="en">Ethics</span> – <span class="en">Competence</span> و <span class="en">Computer misuse</span></td><td>متقبلش شغل برّه مستوى كفاءتك وانت عارف. وإساءة استخدام الكمبيوتر بتبدأ من حاجة بسيطة (لعب على جهاز الشركة) لحد خطيرة جداً (نشر فيروسات). اللعب على جهاز الشغل بيتعد <span class="en">misuse.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Intellectual property rights</span></td><td>لازم تعرف القوانين المحلية للـ <span class="en">IP</span> زي <span class="en">patents</span> و <span class="en">copyright</span>، وتحمي الملكية الفكرية لصاحب العمل والعميل. <span class="n">فخ</span></td></tr></table></div>
+<h2 class="sec">فخاخ <span class="en">Lecture 2</span> – Process Models</h2><div class="tw"><table><tr><th>الموضوع</th><th>أهم نقطة</th></tr><tr><td><span class="en">Waterfall</span> – 5 <span class="en">phases</span> بالترتيب</td><td><span class="en">Requirements analysis and definition</span> → <span class="en">System and software design</span> → <span class="en">Implementation and unit testing</span> → <span class="en">Integration and system testing</span> → <span class="en">Operation and maintenance.</span> الـ <span class="en">Unit testing</span> مع الـ <span class="en">Implementation</span>، والـ <span class="en">System testing</span> مع الـ <span class="en">Integration.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Waterfall</span> – صغير ولا كبير؟</td><td>في الـ <span class="en">Pros</span>: بيشتغل مع المشاريع الصغيرة المفهومة. لكن بيتستخدم غالباً في مشاريع هندسة الأنظمة الكبيرة اللي بتتطور في أكتر من موقع. ومناسب بس لو الـ <span class="en">requirements</span> مفهومة وثابتة، وقليل من أنظمة الأعمال <span class="en">requirements</span> بتاعتها ثابتة. <span class="n">فخ</span></td></tr><tr><td><span class="en">Waterfall</span> – العيوب</td><td>مش بيستوعب التغيير بعد ما العملية بدأت • الاختبار بييجي متأخر • موافقة العميل في الآخر • لازم المرحلة تخلص قبل ما نبدأ اللي بعدها. <span class="n">فخ</span></td></tr><tr><td><span class="en">Evolutionary</span> – مجال الاستخدام</td><td>مناسب لأنظمة تفاعلية صغيرة أو متوسطة، وأجزاء من أنظمة كبيرة (زي الـ <span class="en">user interface</span>)، وأنظمة عمرها قصير. مشاكله: مفيش <span class="en">process visibility</span>، والهيكل ضعيف، ومحتاج مهارات خاصة. <span class="n">فخ</span></td></tr><tr><td><span class="en">Prototyping</span> – العميل مزية وعيب</td><td>مشاركة العميل المبكرة والمتكررة مزية (بتقلل احتمال رفض المنتج). ونفس المشاركة ممكن تسبب <span class="en">delays</span> (عيب). والـ <span class="en">throw-away prototype</span> شغله بيضيع، والتخطيط والإدارة صعبين. <span class="n">فخ</span></td></tr><tr><td><span class="en">Incremental</span> – الأولويات والاختبار</td><td>الـ <span class="en">requirements</span> بتترتب حسب الأولوية، والأعلى أولوية في الـ <span class="en">increments</span> الأولى، فبياخدوا أكتر اختبار. والـ <span class="en">increments</span> الأولى بتشتغل كـ <span class="en">prototype</span> لاستخلاص <span class="en">requirements</span> اللي بعدها. <span class="n">فخ</span></td></tr><tr><td><span class="en">Iteration</span> مش <span class="en">model</span> لوحده</td><td>الـ <span class="en">iteration</span> (إعادة الشغل على مراحل سابقة) بيتطبق على أي <span class="en">generic process model</span>، وهو دايماً موجود في الأنظمة الكبيرة لأن الـ <span class="en">requirements ALWAYS</span> بتتطور. وليه طريقتين: <span class="en">Incremental delivery</span> و <span class="en">Spiral.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Spiral</span> – ملهوش <span class="en">phases</span> ثابتة</td><td>مفيش <span class="en">Specification</span> أو <span class="en">Design</span> ثابتين، اللفات بتتحدد حسب المطلوب. والـ <span class="en">sector</span> التالت (<span class="en">Development and validation</span>) بيختار أي <span class="en">generic model.</span> والمخاطر بتتقيّم وتتحل طول العملية. <span class="n">فخ</span></td></tr><tr><td><span class="en">Spiral</span> – مزايا وعيوب</td><td>مزايا: مشاركة العميل مستمرة، مناسب للمشاريع الكبيرة المعقدة، والمنتجات القابلة للتوسعة. عيوب: فشل تحليل المخاطر ممكن يدمّر المشروع، وصعب يتدار، ومحتاج فريق تطوير خبير. <span class="n">فخ</span></td></tr><tr><td><span class="en">Requirements engineering</span> – 4 خطوات بالترتيب</td><td><span class="en">Feasibility study</span> → <span class="en">Requirements elicitation and analysis</span> → <span class="en">Requirements specification</span> → <span class="en">Requirements validation.</span> الـ <span class="en">Feasibility study</span> هي الخطوة الأولى. <span class="n">فخ</span></td></tr><tr><td><span class="en">Design vs Implementation</span></td><td><span class="en">Design</span> = نصمم هيكل بيحقق الـ <span class="en">specification</span>، و<span class="en">Implementation</span> = نترجمه لبرنامج تنفيذي. مرتبطين وممكن يتداخلوا (<span class="en">interleaved</span>). 6 أنشطة تصميم: <span class="en">Architectural</span> • <span class="en">Abstract specification</span> • <span class="en">Interface</span> • <span class="en">Component</span> • <span class="en">Data structure</span> • <span class="en">Algorithm.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Structured methods</span> – 5 <span class="en">models</span></td><td><span class="en">Object</span> • <span class="en">Sequence</span> • <span class="en">State transition</span> • <span class="en">Structural</span> • <span class="en">Data-flow.</span> وبتتوثق كـ <span class="en">graphical models.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Testing</span> ≠ <span class="en">Debugging</span></td><td>الـ <span class="en">testing</span> بيكتشف الـ <span class="en">faults</span>، والـ <span class="en">debugging</span> هو اللي بيشيلها. والـ <span class="en">programming</span> نشاط شخصي ومفيش <span class="en">generic programming process.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">V</span> &amp; <span class="en">V</span> – بيشمل إيه؟</td><td>الهدف إثبات إن النظام مطابق للـ <span class="en">specification</span> وبيحقق احتياجات العميل. بيشمل <span class="en">checking and review processes</span> + <span class="en">system testing.</span> والـ <span class="en">test cases</span> بتتشتق من الـ <span class="en">specification.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Testing stages</span> – مين بياخد إيه؟</td><td><span class="en">Component</span> = كل جزء لوحده (<span class="en">functions</span> أو <span class="en">objects</span>) • <span class="en">System</span> = النظام ككل، وأهم حاجة الـ <span class="en">emergent properties</span> • <span class="en">Acceptance</span> = بـ <span class="en">data</span> العميل. الـ <span class="en">emergent properties</span> في الـ <span class="en">System testing.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Evolution</span> = <span class="en">Maintenance</span></td><td>الفاصل بين <span class="en">development</span> و <span class="en">evolution</span> (<span class="en">maintenance</span>) بقى أقل أهمية، لأن قليل من الأنظمة جديد بالكامل. والسوفت وير مرن بطبيعته ولازم يتغير مع تغيّر ظروف العمل. <span class="n">فخ</span></td></tr><tr><td><span class="en">CASE</span> – 5 أدوات أتمتة</td><td><span class="en">Graphical editors</span> للـ <span class="en">models</span> • <span class="en">Data dictionary</span> لإدارة عناصر التصميم • <span class="en">Graphical UI builder</span> • <span class="en">Debuggers</span> • <span class="en">Automated translators</span> (بتولّد نسخ جديدة من البرنامج). <span class="n">فخ</span></td></tr><tr><td><span class="en">RUP</span></td><td>الـ <span class="en">Rational Unified Process</span> = <span class="en">generic process model</span> بيفصل الـ <span class="en">activities</span> عن الـ <span class="en">phases</span>، عكس <span class="en">Waterfall</span> اللي المرحلة فيه هي النشاط نفسه. <span class="n">فخ</span></td></tr></table></div>
+<h2 class="sec">فخاخ <span class="en">Lecture 3</span> – Agile Frameworks</h2><div class="tw"><table><tr><th>الموضوع</th><th>أهم نقطة</th></tr><tr><td><span class="en">Agility</span> مش 'من غير تخطيط'</td><td>الخطط عمرها قصير (<span class="en">short-lived</span>) بس مش ملغية. والـ <span class="en">Agility</span> = <span class="en">response</span> سريع ومتكيّف، تواصل فعّال بين كل الـ <span class="en">stakeholders</span>، العميل جوه الفريق، الفريق متحكم في شغله، وتسليم سريع تزايدي. <span class="n">فخ</span></td></tr><tr><td><span class="en">Cost of change</span> – 3 منحنيات</td><td><span class="en">Agile</span>: بيزيد ببطء وثبات. <span class="en">Idealized agile</span>: بداية بطيئة ومعدل ثابت بعدها. <span class="en">Conventional</span>: بداية بطيئة وبعدين <span class="en">peak</span> قرب النهاية. التغيير الأغلى في النهاية في الـ <span class="en">conventional.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Agile process</span> – السمات</td><td>مدفوع بـ <span class="en">scenarios</span> من العميل • <span class="en">feedback</span> متكرر ومتنفّذ • خطط قصيرة العمر • <span class="en">iterative</span> مع تركيز كبير على الـ <span class="en">construction</span> • بيسلّم <span class="en">increments</span> كـ <span class="en">executable prototypes.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Agility principles</span> – كلمات الامتحان</td><td>التسليم كل أسابيع مش شهور • تواصل <span class="en">face-to-face</span> • الـ <span class="en">working software</span> هو الـ <span class="en">primary goal</span> • الـ <span class="en">pace</span> لازم يكون <span class="en">sustainable</span> • الفريق <span class="en">self-organizing</span> • الفريق بيراجع نفسه <span class="en">introspectively.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Product backlog vs Sprint backlog</span></td><td><span class="en">Product backlog</span> = كل مميزات المنتج المرتبة بالأولوية من العميل. <span class="en">Sprint backlog</span> = المميزات المخصصة للـ <span class="en">sprint</span> بس، والفريق بيوسّعها خلال 30 يوم. <span class="n">فخ</span></td></tr><tr><td><span class="en">Sprint Review vs Retrospective</span></td><td><span class="en">Review</span> = <span class="en">demo</span> للـ <span class="en">prototype</span> للـ <span class="en">stakeholders</span> للموافقة أو الرفض. <span class="en">Retrospective</span> = الفريق بيراجع بعد ما الـ <span class="en">sprint</span> يخلص إيه اللي كان كويس وإيه محتاج تحسين. الـ <span class="en">Retrospective</span> للفريق مش للعميل. <span class="n">فخ</span></td></tr><tr><td><span class="en">Refinement vs Planning vs Daily</span></td><td><span class="en">Refinement</span> = الـ <span class="en">developers</span> مع الـ <span class="en">stakeholders</span> لعمل الـ <span class="en">product backlog</span> • <span class="en">Planning</span> = الـ <span class="en">backlog</span> يتقسم لـ <span class="en">sprints</span> ويتحدد الـ <span class="en">sprint</span> الجاي • <span class="en">Daily Scrum</span> = 15 دقيقة كحد أقصى لتنسيق الفريق. <span class="n">فخ</span></td></tr><tr><td><span class="en">Scrum</span> – مين بياخد القرار؟</td><td>الـ <span class="en">Product owner</span> هو اللي بيحدد الأولويات، والفريق بيملك قرارات التنفيذ. مزايا: توثيق خفيف ودعم تحديث متكرر. عيوب: صعب تتحكم في تكلفة التغيير، ومش مناسب للفرق الكبيرة، ومحتاج أعضاء خبرة. <span class="n">فخ</span></td></tr><tr><td><span class="en">XP</span> – 4 مراحل ومحتواها</td><td><span class="en">Planning</span>: <span class="en">user stories</span> + <span class="en">acceptance test criteria</span> + <span class="en">iteration plan</span> • <span class="en">Design</span>: <span class="en">simple design</span> + <span class="en">CRC cards</span> + <span class="en">spike solutions</span> + <span class="en">prototypes</span> • <span class="en">Coding</span>: <span class="en">unit tests</span> + <span class="en">pair programming</span> + <span class="en">continuous integration</span> • <span class="en">Testing</span>: <span class="en">acceptance testing</span> + <span class="en">project velocity.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">XP</span> – مين بيعمل إيه؟</td><td>الفريق هو اللي بيقدّر التكلفة من الـ <span class="en">user stories.</span> العميل هو اللي بيحدد الـ <span class="en">acceptance tests.</span> والـ <span class="en">unit tests</span> بتتنفذ يومياً. والـ <span class="en">project velocity</span> بتتحسب. <span class="n">فخ</span></td></tr><tr><td><span class="en">Refactoring</span> في مكانين</td><td>الـ <span class="en">Refactoring</span> بيظهر في الـ <span class="en">XP Design</span> وفي الـ <span class="en">XP Coding</span> (مع <span class="en">pair programming</span>). والتصميم بيمشي على مبدأ <span class="en">KIS</span> (<span class="en">Keep It Simple</span>). <span class="n">فخ</span></td></tr><tr><td><span class="en">XP</span> – مزايا وعيوب</td><td>مزايا: تركيز على مشاركة العميل، خطط وجداول منطقية، التزام عالي من المطورين. عيوب: اجتماعات متكررة بتزود التكلفة، بيسمح بتغييرات زيادة، ومعتمد على فريق مهاراته عالية. <span class="n">فخ</span></td></tr><tr><td><span class="en">Kanban</span> – الأعمدة والـ <span class="en">expedite lane</span></td><td>6 أعمدة من الشمال لليمين: <span class="en">Backlog</span> → <span class="en">Selected</span> → <span class="en">Analysis</span> → <span class="en">Development</span> → <span class="en">Testing</span> → <span class="en">Done.</span> والـ <span class="en">expedite lane</span> ممكن تتحط بين <span class="en">Backlog</span> و <span class="en">Selected.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Kanban</span> – مبادئه</td><td><span class="en">Visualize workflow</span> • <span class="en">Limit work in progress</span> • قلل الـ <span class="en">waste</span> بفهم <span class="en">value flow</span> • سياسات واضحة فيها معيار '<span class="en">done'</span> • تحسين مستمر بـ <span class="en">feedback loops</span> • التغييرات بتتعمل بشكل تعاوني. <span class="n">فخ</span></td></tr><tr><td><span class="en">Kanban</span> – مزايا وعيوب</td><td>مزايا: ميزانية ووقت أقل، تسليم مبكر، سياسات مكتوبة، تحسين مستمر. عيوب: النجاح بيعتمد على مهارات التعاون، وضعف الـ <span class="en">business analysis</span> ممكن يدمّر المشروع، والمرونة ممكن تفقّد المطورين التركيز. <span class="n">فخ</span></td></tr><tr><td><span class="en">DevOps</span> – الدورة</td><td><span class="en">Plan</span> → <span class="en">Code</span> → <span class="en">Build</span> → <span class="en">Test</span> (على الشمال) و <span class="en">Deploy</span> → <span class="en">Operate</span> → <span class="en">Monitor</span> (على اليمين). الـ <span class="en">Test</span> بيتكامل مع <span class="en">Deploy</span>، والـ <span class="en">Monitor</span> بيرجع يتكامل مع الـ <span class="en">Plan.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">DevOps</span> – كل <span class="en">continuous</span> معناه</td><td><span class="en">Testing</span> = بأدوات <span class="en">automated</span> • <span class="en">Integration</span> = كود بوظيفة جديدة بيتضاف للكود الشغال • <span class="en">Deployment</span> = الكود المتكامل بيتنشر على الـ <span class="en">production environment</span> • <span class="en">Monitoring</span> = فريق الـ <span class="en">operations</span> بيراقب الأداء <span class="en">proactively.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">DevOps</span> – مزايا وعيوب</td><td>مزايا: وقت نشر أقل، الفريق فيه <span class="en">developers</span> + <span class="en">operations</span>، ملكية <span class="en">end-to-end</span>، مراقبة استباقية. عيوب: ضغط الشغل على كود قديم وجديد، اعتماد كبير على أدوات آلية، النشر ممكن يأثر على الـ <span class="en">production</span>، ومحتاج فريق خبير. <span class="n">فخ</span></td></tr></table></div>
+<h2 class="sec">فخاخ <span class="en">Requirements</span> – المتطلبات</h2><div class="tw"><table><tr><th>الموضوع</th><th>أهم نقطة</th></tr><tr><td><span class="en">Requirement</span> ليه وظيفة مزدوجة</td><td>ممكن يبقى أساس لعرض على عقد (<span class="en">bid</span>) فلازم يبقى مفتوح للتفسير، وممكن يبقى أساس العقد نفسه فلازم يتعرف بالتفصيل. الاتنين اسمهم <span class="en">requirements.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Functional vs Non-functional</span></td><td><span class="en">Functional</span> = الخدمات اللي النظام يقدمها وإزاي يتفاعل مع <span class="en">inputs</span> معينة ويتصرف في مواقف معينة. <span class="en">Non-functional</span> = قيود زي <span class="en">timing constraints</span> وقيود على عملية التطوير والـ <span class="en">standards.</span> وممكن <span class="en">NFR</span> يفرض <span class="en">CASE system</span> أو لغة برمجة أو <span class="en">development method.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Functional user vs system</span></td><td>الـ <span class="en">Functional user requirements</span> ممكن تبقى <span class="en">high-level</span>، لكن الـ <span class="en">Functional system requirements</span> لازم توصف الخدمات بالتفصيل. <span class="n">فخ</span></td></tr><tr><td><span class="en">Imprecision</span> – مثال '<span class="en">appropriate viewers'</span></td><td>المستخدم يقصد <span class="en">viewer</span> مخصوص لكل نوع مستند، والمطوّر فسّرها بـ <span class="en">text viewer</span> واحد. الـ <span class="en">requirements</span> الغامضة بتتفسر بطرق مختلفة. <span class="n">فخ</span></td></tr><tr><td><span class="en">Complete vs Consistent</span> – التعريف</td><td><span class="en">Complete</span> = كل الـ <span class="en">facilities</span> المطلوبة موصوفة. <span class="en">Consistent</span> = مفيش تعارض أو تناقض. المفروض الاتنين، وعملياً مستحيل تحقق الاتنين مع بعض. <span class="n">فخ</span></td></tr><tr><td>تصنيفات الـ <span class="en">NFR</span> – 3</td><td><span class="en">Product</span> = سلوك المنتج (<span class="en">execution speed</span>, <span class="en">reliability</span>) • <span class="en">Organisational</span> = من سياسات المؤسسة (<span class="en">process standards</span>, <span class="en">implementation</span>) • <span class="en">External</span> = من خارج النظام (<span class="en">interoperability</span>, <span class="en">legislative</span>). <span class="n">فخ</span></td></tr><tr><td><span class="en">NFR types</span> تحت أي تصنيف؟</td><td><span class="en">Product</span>: <span class="en">Performance</span> • <span class="en">Space</span> • <span class="en">Usability</span> • <span class="en">Efficiency</span> • <span class="en">Reliability</span> • <span class="en">Portability. Organisational</span>: <span class="en">Delivery</span> • <span class="en">Implementation</span> • <span class="en">Standards. External</span>: <span class="en">Interoperability</span> • <span class="en">Ethical</span> • <span class="en">Legislative</span> (<span class="en">Safety</span> • <span class="en">Privacy</span>). <span class="n">فخ</span></td></tr><tr><td>أمثلة <span class="en">LIBSYS</span> – نصنّف إزاي؟</td><td><span class="en">HTML</span> بسيط من غير <span class="en">frames</span> أو <span class="en">Java applets</span> = <span class="en">Product</span> • الالتزام بـ <span class="en">XYZCo-SP-STAN-95</span> = <span class="en">Organisational</span> • عدم كشف معلومات شخصية للـ <span class="en">operators</span> غير الاسم والرقم المرجعي = <span class="en">External.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Goal vs Verifiable NFR</span></td><td><span class="en">Goal</span> = نية عامة زي <span class="en">ease of use</span> ومفيدة للمطورين لكن صعب تتحقق منها. <span class="en">Verifiable NFR</span> = جملة بمقياس ممكن يتختبر بموضوعية، زي: كل الوظائف بعد ساعتين تدريب وبحد أقصى خطأين في اليوم. <span class="n">فخ</span></td></tr><tr><td><span class="en">Measures</span> – <span class="en">Speed</span> و <span class="en">Size</span> و <span class="en">Ease of use</span></td><td><span class="en">Speed</span> = <span class="en">transactions/second</span>, <span class="en">response time</span>, <span class="en">screen refresh time</span> • <span class="en">Size</span> = <span class="en">M Bytes</span>, <span class="en">number of ROM chips</span> • <span class="en">Ease of use</span> = <span class="en">training time</span>, <span class="en">number of help frames.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Measures</span> – <span class="en">Reliability vs Robustness</span></td><td><span class="en">Reliability</span> = <span class="en">MTTF</span> + <span class="en">probability of unavailability</span> + <span class="en">rate of failure occurrence</span> + <span class="en">availability. Robustness</span> = <span class="en">time to restart after failure</span> + <span class="en">percentage of events causing failure</span> + <span class="en">probability of data corruption.</span> <span class="n">فخ</span></td></tr><tr><td><span class="en">Measures</span> – <span class="en">Portability</span></td><td><span class="en">Portability</span> = <span class="en">percentage of target-dependent statements</span> + <span class="en">number of target systems.</span> <span class="n">فخ</span></td></tr></table></div>
 <div class="sp"></div>
 </div>
 <div class="sig"><span><span class="en">eng mahmoud mohamed</span></span><small><span class="en">Coding Create</span> · <span class="en">Code. Create. Inspire.</span></small></div>
 </article>
 <article class="sheet" id="gk">
+<style id="gk-fix">
+/* المفتاح الذهبي: أعمدة ثابتة العرض + أول سطر في الخليتين على نفس الخط + تظليل خفيف يفصل الصفوف (من غير ما نغيّر ارتفاع السطر) */
+#gk .tw{overflow:visible}
+#gk table{table-layout:fixed;width:100%;min-width:0}
+#gk th:first-child,#gk td:first-child{width:36%}
+#gk th,#gk td{padding:0 12px;vertical-align:top;overflow-wrap:break-word;word-break:normal}
+#gk td{font-size:19px}
+#gk td:first-child{direction:ltr;text-align:left;unicode-bidi:isolate}
+#gk td:first-child .en{font-size:1em;font-weight:800}
+#gk td:last-child{line-height:var(--lh)}
+#gk td .en{display:inline;line-height:inherit;vertical-align:baseline}
+#gk tr:nth-child(even) td{background:rgba(47,107,255,.06)}
+@media(max-width:700px){
+  #gk th:first-child,#gk td:first-child{width:45%}
+  #gk th,#gk td{padding:0 6px}
+  #gk td{font-size:16px}
+  #gk td:first-child{font-size:14.5px}
+  #gk th{font-size:16px}
+}
+</style>
 <header class="head"><span class="slot"></span><h1 class="title">المفتاح الذهبي 🗝️</h1><p class="by">ملخص: <span class="lt">Mahmoud Mohamed</span></p></header>
 <div class="lines">
 <h2 class="sec">كلمات وأفعال بتتكرر في أي سؤال</h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">Ensure</span></td><td>يضمن</td></tr>
+<tr><td><span class="en">Deliver / Delivery</span></td><td>يسلّم / تسليم المنتج للعميل</td></tr>
+<tr><td><span class="en">Develop / Development</span></td><td>يطوّر / تطوير</td></tr>
 <tr><td><span class="en">Provide</span></td><td>يوفّر / يدّي</td></tr>
-<tr><td><span class="en">Support</span></td><td>يدعم</td></tr>
-<tr><td><span class="en">Require</span></td><td>يتطلب / يحتاج</td></tr>
-<tr><td><span class="en">Specify</span></td><td>يحدد / يوصّف</td></tr>
-<tr><td><span class="en">Violate</span></td><td>يخالف</td></tr>
-<tr><td><span class="en">Retrieve</span></td><td>يسترجع / يجيب البيانات</td></tr>
-<tr><td><span class="en">Store</span></td><td>يخزّن</td></tr>
-<tr><td><span class="en">Access</span></td><td>يوصل لـ / وصول</td></tr>
-<tr><td><span class="en">Modify</span></td><td>يعدّل</td></tr>
-<tr><td><span class="en">Update</span></td><td>يحدّث</td></tr>
-<tr><td><span class="en">Maintain</span></td><td>يحافظ على / صيانة</td></tr>
-<tr><td><span class="en">Manage</span></td><td>يدير</td></tr>
-<tr><td><span class="en">Execute</span></td><td>ينفّذ</td></tr>
-<tr><td><span class="en">Generate</span></td><td>يولّد / ينتج</td></tr>
-<tr><td><span class="en">Translate</span></td><td>يترجم</td></tr>
-<tr><td><span class="en">Interpret</span></td><td>يفسّر</td></tr>
-<tr><td><span class="en">Compile</span></td><td>يترجم الكود لتعليمات للجهاز</td></tr>
-<tr><td><span class="en">Reside</span></td><td>موجود / قاعد في</td></tr>
-<tr><td><span class="en">Partition(ed)</span></td><td>يقسّم / مقسّم</td></tr>
+<tr><td><span class="en">Ensure</span></td><td>يضمن</td></tr>
+<tr><td><span class="en">Convey</span></td><td>ينقل (معلومة أو قصد)</td></tr>
+<tr><td><span class="en">Elicit / Elicitation</span></td><td>يستخلص / استخلاص (المتطلبات من العميل)</td></tr>
+<tr><td><span class="en">Conform to</span></td><td>يتوافق مع / يلتزم بـ</td></tr>
+<tr><td><span class="en">Comply with</span></td><td>يلتزم بـ (قوانين أو معايير)</td></tr>
+<tr><td><span class="en">Accommodate</span></td><td>يستوعب (التغيير)</td></tr>
+<tr><td><span class="en">Adapt / Adapted</span></td><td>يتكيّف / يتأقلم</td></tr>
+<tr><td><span class="en">Enhance(d)</span></td><td>يحسّن / يطوّر</td></tr>
+<tr><td><span class="en">Extend(ed)</span></td><td>يوسّع / يمدّ</td></tr>
+<tr><td><span class="en">Evolve / Evolution</span></td><td>يتطوّر / تطوّر</td></tr>
+<tr><td><span class="en">Maintain / Maintenance</span></td><td>يصون / صيانة</td></tr>
+<tr><td><span class="en">Implement / Implementation</span></td><td>ينفّذ (يحوّل التصميم لكود) / تنفيذ</td></tr>
+<tr><td><span class="en">Construct / Construction</span></td><td>يبني / بناء</td></tr>
+<tr><td><span class="en">Assemble(d)</span></td><td>يجمّع (من أجزاء جاهزة)</td></tr>
+<tr><td><span class="en">Reuse / Reusable</span></td><td>إعادة استخدام / قابل لإعادة الاستخدام</td></tr>
+<tr><td><span class="en">Verify / Verification</span></td><td>يتحقق إننا بنبني المنتج صح / تحقق</td></tr>
+<tr><td><span class="en">Validate / Validation</span></td><td>يتأكد إننا بنبني المنتج الصح (اللي العميل عايزه) / تحقق من الصلاحية</td></tr>
+<tr><td><span class="en">Specify / Specification</span></td><td>يحدد ويوصّف / توصيف</td></tr>
+<tr><td><span class="en">Describe</span></td><td>يوصف</td></tr>
+<tr><td><span class="en">Represent / Representation</span></td><td>يمثّل / تمثيل</td></tr>
+<tr><td><span class="en">Establish</span></td><td>يحدد / يثبّت / يؤسس</td></tr>
+<tr><td><span class="en">Identify</span></td><td>يحدد (يتعرف على)</td></tr>
+<tr><td><span class="en">Derive(d) from</span></td><td>يشتق من / ناتج عن</td></tr>
+<tr><td><span class="en">Transform / Convert</span></td><td>يحوّل</td></tr>
+<tr><td><span class="en">Realise</span></td><td>يحقق / يجسّد</td></tr>
+<tr><td><span class="en">Interleave(d)</span></td><td>متداخلة (بتحصل بالتبادل مع بعض)</td></tr>
+<tr><td><span class="en">Rework(ed)</span></td><td>يعيد الشغل على حاجة اتعملت قبل كده</td></tr>
+<tr><td><span class="en">Freeze / Frozen</span></td><td>يجمّد / مجمّدة (متتغيرش)</td></tr>
+<tr><td><span class="en">Mandate</span></td><td>يفرض / يلزم</td></tr>
+<tr><td><span class="en">Cope with</span></td><td>يتعامل مع / يتحمّل</td></tr>
+<tr><td><span class="en">Convey / Disclose</span></td><td>ينقل / يفشي (يكشف معلومة)</td></tr>
+<tr><td><span class="en">Misrepresent</span></td><td>يعرض معلومة غلط عن نفسه (يزوّر مستواه)</td></tr>
+<tr><td><span class="en">Uphold</span></td><td>يحافظ على / يلتزم بـ (القانون)</td></tr>
+<tr><td><span class="en">Dominate</span></td><td>يسيطر / يمثّل الجزء الأكبر</td></tr>
+<tr><td><span class="en">Exceed</span></td><td>يتجاوز / يزيد عن</td></tr>
+<tr><td><span class="en">Vary</span></td><td>يختلف / يتفاوت</td></tr>
+<tr><td><span class="en">Range from … to …</span></td><td>يتراوح من … إلى …</td></tr>
+<tr><td><span class="en">Depend on</span></td><td>يعتمد على / حسب</td></tr>
+<tr><td><span class="en">Concerned with</span></td><td>معني بـ / بيهتم بـ</td></tr>
+<tr><td><span class="en">Involve(s)</span></td><td>يتضمن / بيشمل</td></tr>
 <tr><td><span class="en">Consist(s) of</span></td><td>بيتكوّن من</td></tr>
 <tr><td><span class="en">Include(s)</span></td><td>يشمل</td></tr>
-<tr><td><span class="en">Contain</span></td><td>يحتوي على</td></tr>
 <tr><td><span class="en">Such as / e.g.</span></td><td>زي / على سبيل المثال</td></tr>
 <tr><td><span class="en">i.e.</span></td><td>يعني</td></tr>
 <tr><td><span class="en">etc.</span></td><td>وهكذا</td></tr>
 <tr><td><span class="en">Whereas</span></td><td>بينما</td></tr>
-<tr><td><span class="en">However</span></td><td>لكن</td></tr>
-<tr><td><span class="en">Thus / Therefore / Hence</span></td><td>وبالتالي</td></tr>
-<tr><td><span class="en">Otherwise</span></td><td>وإلا</td></tr>
-<tr><td><span class="en">Either … or</span></td><td>يا ده يا ده</td></tr>
-<tr><td><span class="en">Neither … nor</span></td><td>لا ده ولا ده</td></tr>
-<tr><td><span class="en">Both</span></td><td>الاتنين</td></tr>
-<tr><td><span class="en">Each / Every</span></td><td>كل واحد</td></tr>
-<tr><td><span class="en">Any</span></td><td>أي واحد</td></tr>
-<tr><td><span class="en">At least</span></td><td>على الأقل</td></tr>
-<tr><td><span class="en">At most</span></td><td>على الأكتر</td></tr>
-<tr><td><span class="en">Exactly</span></td><td>بالظبط</td></tr>
-<tr><td><span class="en">Same / Different</span></td><td>نفس / مختلف</td></tr>
-<tr><td><span class="en">Equivalent</span></td><td>مكافئ (يدّي نفس النتيجة)</td></tr>
-<tr><td><span class="en">Identical</span></td><td>مطابق (نفس الشكل بالحرف)</td></tr>
-<tr><td><span class="en">Compatible</span></td><td>متوافق</td></tr>
-<tr><td><span class="en">Valid / Invalid</span></td><td>صالح / غير صالح</td></tr>
-<tr><td><span class="en">Erroneous</span></td><td>غلط، فيه خطأ</td></tr>
-<tr><td><span class="en">Unique / Uniquely</span></td><td>فريد / بشكل مميز (من غير تكرار)</td></tr>
-<tr><td><span class="en">Unknown</span></td><td>مجهول</td></tr>
-<tr><td><span class="en">Directly / Indirectly</span></td><td>مباشرةً / بشكل غير مباشر</td></tr>
-<tr><td><span class="en">Efficient</span></td><td>كفء، سريع</td></tr>
-<tr><td><span class="en">Automatically</span></td><td>تلقائياً</td></tr>
-<tr><td><span class="en">Temporary</span></td><td>مؤقت</td></tr>
-<tr><td><span class="en">Overall</span></td><td>الإجمالي / الكلي</td></tr>
-<tr><td><span class="en">Particular</span></td><td>معيّن</td></tr>
-<tr><td><span class="en">Widely used</span></td><td>واسع الاستخدام</td></tr>
+<tr><td><span class="en">Therefore / Thus</span></td><td>وبالتالي</td></tr>
+<tr><td><span class="en">Rather than</span></td><td>بدل ما</td></tr>
+<tr><td><span class="en">Irrespective of</span></td><td>بغض النظر عن</td></tr>
+<tr><td><span class="en">Apart from</span></td><td>ما عدا / غير</td></tr>
+<tr><td><span class="en">Out with (UK)</span></td><td>خارج (يعني <span class="en">outside</span>)</td></tr>
+<tr><td><span class="en">In response to</span></td><td>ردّاً على / استجابةً لـ</td></tr>
+<tr><td><span class="en">Roughly</span></td><td>تقريباً</td></tr>
+<tr><td><span class="en">Inevitable</span></td><td>حتمي / مفيش مفر منه</td></tr>
+<tr><td><span class="en">Inherently</span></td><td>بطبيعته</td></tr>
+<tr><td><span class="en">Increasingly</span></td><td>بشكل متزايد</td></tr>
+<tr><td><span class="en">Explicitly</span></td><td>بشكل صريح / واضح</td></tr>
+<tr><td><span class="en">Objectively</span></td><td>بشكل موضوعي (محايد)</td></tr>
+<tr><td><span class="en">Appropriate</span></td><td>مناسب</td></tr>
+<tr><td><span class="en">Sufficient / Insufficient</span></td><td>كافي / مش كافي</td></tr>
+<tr><td><span class="en">Essential</span></td><td>أساسي / جوهري</td></tr>
+<tr><td><span class="en">Primary</span></td><td>رئيسي</td></tr>
+<tr><td><span class="en">Trivial</span></td><td>تافه / بسيط</td></tr>
+<tr><td><span class="en">Trustworthy</span></td><td>موثوق فيه</td></tr>
+<tr><td><span class="en">Wasteful</span></td><td>مُهدِر / فيه إسراف</td></tr>
+<tr><td><span class="en">Frequent / Frequently</span></td><td>متكرر / كتير</td></tr>
+<tr><td><span class="en">Ongoing / Continuous</span></td><td>مستمر</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">Chapter</span> 1 – أمثلة تطبيقات الـ <span class="en">Database</span></h2>
+<h2 class="sec"><span class="en">Nature of Software</span> – طبيعة السوفت وير</h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">Enterprise information</span></td><td>معلومات المؤسسة / الشركة</td></tr>
-<tr><td><span class="en">Sales</span></td><td>المبيعات</td></tr>
-<tr><td><span class="en">Customer / Product / Purchase</span></td><td>عميل / منتج / عملية شراء</td></tr>
-<tr><td><span class="en">Accounting</span></td><td>المحاسبة</td></tr>
-<tr><td><span class="en">Payments / Receipts</span></td><td>المدفوعات / الإيصالات</td></tr>
-<tr><td><span class="en">Assets</span></td><td>الأصول</td></tr>
-<tr><td><span class="en">Human Resources</span></td><td>الموارد البشرية</td></tr>
-<tr><td><span class="en">Employees</span></td><td>الموظفين</td></tr>
-<tr><td><span class="en">Salaries / Payroll taxes</span></td><td>المرتبات / ضرايب المرتبات</td></tr>
-<tr><td><span class="en">Manufacturing</span></td><td>التصنيع</td></tr>
-<tr><td><span class="en">Production / Inventory / Orders</span></td><td>الإنتاج / المخزون / الطلبات</td></tr>
-<tr><td><span class="en">Supply chain</span></td><td>سلسلة الإمداد</td></tr>
-<tr><td><span class="en">Banking and finance</span></td><td>البنوك والتمويل</td></tr>
-<tr><td><span class="en">Accounts / Loans</span></td><td>حسابات / قروض</td></tr>
-<tr><td><span class="en">Transactions</span></td><td>معاملات (عمليات)</td></tr>
-<tr><td><span class="en">Financial instruments (stocks, bonds)</span></td><td>أدوات مالية (أسهم، سندات)</td></tr>
-<tr><td><span class="en">Real-time market data</span></td><td>بيانات السوق لحظة بلحظة</td></tr>
-<tr><td><span class="en">Universities: registration, grades</span></td><td>الجامعات: التسجيل، الدرجات</td></tr>
-<tr><td><span class="en">Airlines: reservations, schedules</span></td><td>الطيران: حجوزات، جداول رحلات</td></tr>
-<tr><td><span class="en">Telecommunication</span></td><td>الاتصالات</td></tr>
-<tr><td><span class="en">Records of calls, texts, data usage</span></td><td>سجلات المكالمات والرسايل واستهلاك الإنترنت</td></tr>
-<tr><td><span class="en">Monthly bills</span></td><td>فواتير شهرية</td></tr>
-<tr><td><span class="en">Prepaid calling cards / Balances</span></td><td>كروت شحن / أرصدة</td></tr>
-<tr><td><span class="en">Web-based services</span></td><td>خدمات على الويب</td></tr>
-<tr><td><span class="en">Online retailers / Order tracking</span></td><td>متاجر أونلاين / تتبع الطلبات</td></tr>
-<tr><td><span class="en">Customized recommendations</span></td><td>ترشيحات مخصصة</td></tr>
-<tr><td><span class="en">Online advertisements</span></td><td>إعلانات أونلاين</td></tr>
-<tr><td><span class="en">Document databases</span></td><td>قواعد بيانات المستندات</td></tr>
-<tr><td><span class="en">Navigation systems</span></td><td>أنظمة الملاحة / الخرائط</td></tr>
-<tr><td><span class="en">Places of interest / Routes of roads</span></td><td>أماكن مهمة / مسارات الطرق</td></tr>
+<tr><td><span class="en">Software</span></td><td>البرمجيات (السوفت وير)</td></tr>
+<tr><td><span class="en">Hardware</span></td><td>العتاد (الأجهزة)</td></tr>
+<tr><td><span class="en">Computer program</span></td><td>برنامج كمبيوتر</td></tr>
+<tr><td><span class="en">Instructions</span></td><td>تعليمات</td></tr>
+<tr><td><span class="en">When executed</span></td><td>لما يتنفّذ</td></tr>
+<tr><td><span class="en">Desired features, function, and performance</span></td><td>المميزات والوظائف والأداء المطلوبين</td></tr>
+<tr><td><span class="en">Data structures</span></td><td>هياكل البيانات</td></tr>
+<tr><td><span class="en">Manipulate information</span></td><td>يعالج المعلومات / يتعامل معاها</td></tr>
+<tr><td><span class="en">Documentation</span></td><td>التوثيق (المستندات المصاحبة للبرنامج)</td></tr>
+<tr><td><span class="en">Operation and use of the programs</span></td><td>تشغيل البرامج واستخدامها</td></tr>
+<tr><td><span class="en">User manual</span></td><td>دليل المستخدم</td></tr>
+<tr><td><span class="en">Software product</span></td><td>منتج برمجي</td></tr>
+<tr><td><span class="en">Associated documentation</span></td><td>التوثيق المرتبط</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">Purpose of Database Systems</span> – ليه <span class="en">DB</span> مش ملفات؟</h2>
+<h2 class="sec"><span class="en">Software Application Domains</span> – مجالات تطبيقات السوفت وير</h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">File system</span></td><td>نظام الملفات</td></tr>
-<tr><td><span class="en">Built directly on top of</span></td><td>مبنية مباشرةً فوق</td></tr>
-<tr><td><span class="en">Data redundancy</span></td><td>تكرار البيانات</td></tr>
-<tr><td><span class="en">Inconsistency</span></td><td>عدم تطابق (نفس المعلومة مختلفة في مكانين)</td></tr>
-<tr><td><span class="en">Duplication of information</span></td><td>تكرار المعلومة</td></tr>
-<tr><td><span class="en">Difficulty in accessing data</span></td><td>صعوبة الوصول للبيانات (لازم تكتب برنامج جديد لكل مهمة)</td></tr>
-<tr><td><span class="en">Data isolation</span></td><td>عزل البيانات (ملفات وصيغ كتير)</td></tr>
-<tr><td><span class="en">Multiple files and formats</span></td><td>ملفات وصيغ متعددة</td></tr>
-<tr><td><span class="en">Integrity problems</span></td><td>مشاكل السلامة (القيود)</td></tr>
-<tr><td><span class="en">Integrity constraints</span></td><td>قيود السلامة (زي رصيد الحساب &gt; 0)</td></tr>
-<tr><td><span class="en">Buried in program code</span></td><td>مدفونة جوه كود البرنامج</td></tr>
-<tr><td><span class="en">Atomicity of updates</span></td><td>الذرّية: التحديث يكتمل كله أو ميحصلش خالص</td></tr>
-<tr><td><span class="en">Failures</span></td><td>أعطال</td></tr>
-<tr><td><span class="en">Partial updates</span></td><td>تحديثات ناقصة</td></tr>
-<tr><td><span class="en">Inconsistent state</span></td><td>حالة غير متسقة</td></tr>
-<tr><td><span class="en">Transfer of funds</span></td><td>تحويل فلوس</td></tr>
-<tr><td><span class="en">Concurrent access</span></td><td>وصول متزامن (أكتر من مستخدم مع بعض)</td></tr>
-<tr><td><span class="en">Uncontrolled</span></td><td>من غير تحكم</td></tr>
-<tr><td><span class="en">Withdraw</span></td><td>يسحب</td></tr>
-<tr><td><span class="en">Balance</span></td><td>الرصيد</td></tr>
-<tr><td><span class="en">Security problems</span></td><td>مشاكل الأمان</td></tr>
-<tr><td><span class="en">Hard to provide user access to some, but not all, data</span></td><td>صعب تدّي المستخدم بعض البيانات وتمنع الباقي</td></tr>
+<tr><td><span class="en">Application domain</span></td><td>مجال التطبيق</td></tr>
+<tr><td><span class="en">System software</span></td><td>برمجيات النظام (زي نظام التشغيل)</td></tr>
+<tr><td><span class="en">Application software</span></td><td>برمجيات التطبيقات</td></tr>
+<tr><td><span class="en">Engineering / Scientific software</span></td><td>برمجيات هندسية / علمية</td></tr>
+<tr><td><span class="en">Embedded software</span></td><td>برمجيات مدمجة (جوه جهاز زي الغسالة أو العربية)</td></tr>
+<tr><td><span class="en">Product-line software</span></td><td>برمجيات خط الإنتاج (مكونات بتتعاد استخدامها في منتجات كتير)</td></tr>
+<tr><td><span class="en">Web / Mobile applications</span></td><td>تطبيقات الويب / الموبايل</td></tr>
+<tr><td><span class="en">AI software</span></td><td>برمجيات الذكاء الاصطناعي</td></tr>
+<tr><td><span class="en">Robotics</span></td><td>الروبوتات</td></tr>
+<tr><td><span class="en">Neural nets</span></td><td>الشبكات العصبية</td></tr>
+<tr><td><span class="en">Game playing</span></td><td>لعب الألعاب (ذكاء اصطناعي بيلعب)</td></tr>
+</table></div>
+<h2 class="sec"><span class="en">Legacy Software</span> – ليه لازم السوفت وير يتغيّر؟</h2>
+<div class="tw"><table>
+<tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
+<tr><td><span class="en">Legacy software</span></td><td>برمجيات قديمة موروثة لسه شغالة</td></tr>
+<tr><td><span class="en">Must be adapted</span></td><td>لازم تتكيّف</td></tr>
+<tr><td><span class="en">Computing environment / Technology</span></td><td>بيئة الحوسبة / التكنولوجيا</td></tr>
+<tr><td><span class="en">Must be enhanced</span></td><td>لازم تتحسّن</td></tr>
+<tr><td><span class="en">Business requirements</span></td><td>متطلبات العمل</td></tr>
+<tr><td><span class="en">Must be extended</span></td><td>لازم تتوسّع</td></tr>
+<tr><td><span class="en">Interoperable</span></td><td>قابلة للعمل مع أنظمة تانية</td></tr>
+<tr><td><span class="en">Modern systems or databases</span></td><td>أنظمة أو قواعد بيانات حديثة</td></tr>
+<tr><td><span class="en">Re-architected</span></td><td>اتعاد تصميم بنيتها (الـ <span class="en">architecture</span>)</td></tr>
+<tr><td><span class="en">Viable</span></td><td>قابلة للاستمرار والعمل</td></tr>
+<tr><td><span class="en">Network environment</span></td><td>بيئة شبكية</td></tr>
+</table></div>
+<h2 class="sec"><span class="en">Defining Software Engineering</span> – تعريف هندسة البرمجيات</h2>
+<div class="tw"><table>
+<tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
+<tr><td><span class="en">Software Engineering</span></td><td>هندسة البرمجيات</td></tr>
+<tr><td><span class="en">IEEE definition</span></td><td>تعريف <span class="en">IEEE</span> (منظمة المهندسين الكهربائيين والإلكترونيين)</td></tr>
+<tr><td><span class="en">Systematic</span></td><td>منهجي (بخطوات منظمة)</td></tr>
+<tr><td><span class="en">Disciplined</span></td><td>منضبط</td></tr>
+<tr><td><span class="en">Quantifiable</span></td><td>قابل للقياس</td></tr>
+<tr><td><span class="en">Approach</span></td><td>أسلوب / منهج</td></tr>
+<tr><td><span class="en">Development, operation, and maintenance</span></td><td>تطوير وتشغيل وصيانة</td></tr>
+<tr><td><span class="en">Application of engineering to software</span></td><td>تطبيق الهندسة على السوفت وير</td></tr>
+<tr><td><span class="en">Software Engineering Layers</span></td><td>طبقات هندسة البرمجيات (<span class="en">Quality focus</span> / <span class="en">Process</span> / <span class="en">Methods</span> / <span class="en">Tools</span>)</td></tr>
+<tr><td><span class="en">Quality focus</span></td><td>التركيز على الجودة (الأساس)</td></tr>
+<tr><td><span class="en">Process</span></td><td>العملية: الإطار اللي بيربط الطبقات</td></tr>
+<tr><td><span class="en">Methods</span></td><td>الطرق: بتقول إزاي نبني السوفت وير</td></tr>
+<tr><td><span class="en">Tools</span></td><td>الأدوات: دعم آلي للـ <span class="en">process</span> والـ <span class="en">methods</span></td></tr>
+</table></div>
+<h2 class="sec"><span class="en">Umbrella Activities</span> – الأنشطة المظلّية (بتغطي المشروع كله)</h2>
+<div class="tw"><table>
+<tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
+<tr><td><span class="en">Umbrella activities</span></td><td>أنشطة مظلّية: بتتطبق طول فترة المشروع</td></tr>
+<tr><td><span class="en">Software project tracking and control</span></td><td>تتبع المشروع والتحكم فيه</td></tr>
+<tr><td><span class="en">Risk management</span></td><td>إدارة المخاطر</td></tr>
+<tr><td><span class="en">Software quality assurance (SQA)</span></td><td>ضمان جودة السوفت وير</td></tr>
+<tr><td><span class="en">Technical reviews</span></td><td>مراجعات فنية</td></tr>
+<tr><td><span class="en">Measurement</span></td><td>القياس</td></tr>
+<tr><td><span class="en">Software configuration management (SCM)</span></td><td>إدارة إعدادات السوفت وير (التحكم في النسخ والتغييرات)</td></tr>
+<tr><td><span class="en">Reusability management</span></td><td>إدارة إعادة الاستخدام</td></tr>
+<tr><td><span class="en">Work product preparation and production</span></td><td>إعداد وإنتاج مخرجات الشغل (مستندات ونماذج)</td></tr>
+</table></div>
+<h2 class="sec"><span class="en">Process Framework Activities</span> – أنشطة إطار العملية</h2>
+<div class="tw"><table>
+<tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
+<tr><td><span class="en">Process framework</span></td><td>إطار العملية</td></tr>
+<tr><td><span class="en">Communication</span></td><td>التواصل (مع العميل)</td></tr>
+<tr><td><span class="en">Planning</span></td><td>التخطيط</td></tr>
+<tr><td><span class="en">Modeling</span></td><td>النمذجة</td></tr>
+<tr><td><span class="en">Analysis of requirements</span></td><td>تحليل المتطلبات</td></tr>
+<tr><td><span class="en">Design</span></td><td>التصميم</td></tr>
+<tr><td><span class="en">Construction</span></td><td>البناء</td></tr>
+<tr><td><span class="en">Code generation</span></td><td>كتابة / توليد الكود</td></tr>
+<tr><td><span class="en">Testing</span></td><td>الاختبار</td></tr>
+<tr><td><span class="en">Deployment</span></td><td>النشر / التسليم للمستخدم</td></tr>
+<tr><td><span class="en">UML (Unified Modeling Language)</span></td><td>لغة النمذجة الموحدة (رسومات لتوصيف السوفت وير)</td></tr>
+</table></div>
+<h2 class="sec"><span class="en">Essence of Practice</span> – جوهر الممارسة (طريقة <span class="en">Polya</span>)</h2>
+<div class="tw"><table>
+<tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
+<tr><td><span class="en">Essence of software engineering practice</span></td><td>جوهر ممارسة هندسة البرمجيات</td></tr>
+<tr><td><span class="en">Understand the problem</span></td><td>افهم المشكلة (تواصل وتحليل)</td></tr>
+<tr><td><span class="en">Plan a solution</span></td><td>خطّط للحل (نمذجة وتصميم)</td></tr>
+<tr><td><span class="en">Carry out the plan</span></td><td>نفّذ الخطة (كتابة الكود)</td></tr>
+<tr><td><span class="en">Examine the result for accuracy</span></td><td>افحص النتيجة (اختبار وضمان جودة)</td></tr>
+<tr><td><span class="en">Stakeholder</span></td><td>صاحب مصلحة (أي شخص ليه علاقة بالمشروع)</td></tr>
+<tr><td><span class="en">Unknowns</span></td><td>المجاهيل</td></tr>
+<tr><td><span class="en">Fragmented</span></td><td>يتقسّم لأجزاء</td></tr>
+<tr><td><span class="en">Subproblem</span></td><td>مشكلة فرعية</td></tr>
+<tr><td><span class="en">Represented graphically</span></td><td>يتمثّل بالرسم</td></tr>
+<tr><td><span class="en">Analysis model</span></td><td>نموذج التحليل</td></tr>
+<tr><td><span class="en">Design model</span></td><td>نموذج التصميم</td></tr>
+<tr><td><span class="en">Recognizable patterns</span></td><td>أنماط ممكن تتعرف عليها</td></tr>
+<tr><td><span class="en">Existing software</span></td><td>سوفت وير موجود</td></tr>
+<tr><td><span class="en">Reusable elements</span></td><td>عناصر قابلة لإعادة الاستخدام</td></tr>
+<tr><td><span class="en">Effective implementation</span></td><td>تنفيذ فعّال</td></tr>
+<tr><td><span class="en">Conform to the plan</span></td><td>يطابق الخطة</td></tr>
+<tr><td><span class="en">Traceable</span></td><td>ممكن تتبّعه (الكود مرتبط بالتصميم)</td></tr>
+<tr><td><span class="en">Provably correct</span></td><td>صحته ممكن تتثبت</td></tr>
+<tr><td><span class="en">Correctness proofs</span></td><td>إثباتات الصحة</td></tr>
+<tr><td><span class="en">Testing strategy</span></td><td>استراتيجية الاختبار</td></tr>
+<tr><td><span class="en">Validated against requirements</span></td><td>متأكَّد إنه مطابق للمتطلبات</td></tr>
+</table></div>
+<h2 class="sec"><span class="en">Software Costs</span> – تكاليف السوفت وير</h2>
+<div class="tw"><table>
+<tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
+<tr><td><span class="en">Cost-effective</span></td><td>فعّال من ناحية التكلفة</td></tr>
+<tr><td><span class="en">Software costs dominate</span></td><td>تكاليف السوفت وير هي الأكبر</td></tr>
+<tr><td><span class="en">Maintenance costs</span></td><td>تكاليف الصيانة</td></tr>
+<tr><td><span class="en">Development costs</span></td><td>تكاليف التطوير</td></tr>
+<tr><td><span class="en">Testing costs</span></td><td>تكاليف الاختبار</td></tr>
+<tr><td><span class="en">Evolution costs</span></td><td>تكاليف التطوير بعد التسليم</td></tr>
+<tr><td><span class="en">Long life systems</span></td><td>أنظمة عمرها طويل</td></tr>
+<tr><td><span class="en">System attributes</span></td><td>خصائص النظام</td></tr>
 <tr><td><span class="en">Performance</span></td><td>الأداء</td></tr>
+<tr><td><span class="en">Reliability</span></td><td>الاعتمادية (إنه يشتغل صح باستمرار)</td></tr>
+<tr><td><span class="en">Distribution of costs</span></td><td>توزيع التكاليف</td></tr>
+<tr><td><span class="en">Activity cost distribution</span></td><td>توزيع التكلفة على الأنشطة</td></tr>
+<tr><td><span class="en">Product development costs</span></td><td>تكاليف تطوير المنتج</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">Data Models</span> و <span class="en">Relational Model</span></h2>
+<h2 class="sec"><span class="en">FAQs about Software Engineering</span> – أسئلة شائعة</h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">Data model</span></td><td>نموذج البيانات: مجموعة أدوات لوصف البيانات</td></tr>
-<tr><td><span class="en">Collection of tools</span></td><td>مجموعة أدوات</td></tr>
-<tr><td><span class="en">Data relationships</span></td><td>علاقات البيانات</td></tr>
-<tr><td><span class="en">Data semantics</span></td><td>معنى البيانات</td></tr>
-<tr><td><span class="en">Data constraints</span></td><td>قيود البيانات</td></tr>
-<tr><td><span class="en">Relational model</span></td><td>النموذج العلائقي (البيانات في جداول)</td></tr>
-<tr><td><span class="en">Entity-Relationship (E-R) model</span></td><td>نموذج الكيان والعلاقة (لتصميم الـ <span class="en">DB</span>)</td></tr>
-<tr><td><span class="en">Object-based data models</span></td><td>نماذج مبنية على الكائنات</td></tr>
-<tr><td><span class="en">Object-oriented / Object-relational</span></td><td>كائني التوجه / كائني علائقي</td></tr>
-<tr><td><span class="en">Semi-structured data model (XML)</span></td><td>نموذج بيانات شبه منظم</td></tr>
-<tr><td><span class="en">Network model</span></td><td>النموذج الشبكي (قديم)</td></tr>
-<tr><td><span class="en">Hierarchical model</span></td><td>النموذج الهرمي (قديم)</td></tr>
-<tr><td><span class="en">Table / Columns / Rows</span></td><td>جدول / أعمدة / صفوف</td></tr>
-<tr><td><span class="en">Ted Codd</span></td><td>مخترع النموذج العلائقي</td></tr>
-<tr><td><span class="en">Turing Award</span></td><td>جايزة تورينج (أكبر جايزة في علوم الكمبيوتر)</td></tr>
+<tr><td><span class="en">FAQs (Frequently Asked Questions)</span></td><td>الأسئلة المتكررة</td></tr>
+<tr><td><span class="en">Software products</span></td><td>منتجات برمجية</td></tr>
+<tr><td><span class="en">Generic</span></td><td>عام: بيتباع لعملاء كتير (زي <span class="en">Excel</span> و <span class="en">Word</span>)</td></tr>
+<tr><td><span class="en">Bespoke (custom)</span></td><td>مخصص: بيتعمل لعميل واحد حسب طلبه</td></tr>
+<tr><td><span class="en">Particular customer</span></td><td>عميل معيّن</td></tr>
+<tr><td><span class="en">General market</span></td><td>السوق العام</td></tr>
+<tr><td><span class="en">Configuring generic systems</span></td><td>ضبط أنظمة عامة (تعديل الإعدادات)</td></tr>
+<tr><td><span class="en">Reusing existing software</span></td><td>إعادة استخدام سوفت وير موجود</td></tr>
+<tr><td><span class="en">Engineering discipline</span></td><td>تخصص هندسي</td></tr>
+<tr><td><span class="en">All aspects of software production</span></td><td>كل جوانب إنتاج السوفت وير</td></tr>
+<tr><td><span class="en">Organised approach</span></td><td>أسلوب منظّم</td></tr>
+<tr><td><span class="en">Appropriate tools and techniques</span></td><td>أدوات وأساليب مناسبة</td></tr>
+<tr><td><span class="en">Development constraints</span></td><td>قيود التطوير</td></tr>
+<tr><td><span class="en">Resources available</span></td><td>الموارد المتاحة</td></tr>
+<tr><td><span class="en">Computer science</span></td><td>علوم الحاسب: النظريات والأساسيات</td></tr>
+<tr><td><span class="en">Theory and fundamentals</span></td><td>النظرية والأساسيات</td></tr>
+<tr><td><span class="en">Practicalities</span></td><td>الجوانب العملية</td></tr>
+<tr><td><span class="en">Underpinning</span></td><td>أساس / دعامة</td></tr>
+<tr><td><span class="en">System engineering</span></td><td>هندسة النظم</td></tr>
+<tr><td><span class="en">Computer-based systems</span></td><td>أنظمة قائمة على الكمبيوتر</td></tr>
+<tr><td><span class="en">Hardware, software and process engineering</span></td><td>هندسة العتاد والسوفت وير والعمليات</td></tr>
+<tr><td><span class="en">Software infrastructure</span></td><td>البنية التحتية للسوفت وير</td></tr>
+<tr><td><span class="en">System specification</span></td><td>توصيف النظام</td></tr>
+<tr><td><span class="en">Architectural design</span></td><td>التصميم المعماري</td></tr>
+<tr><td><span class="en">Integration and deployment</span></td><td>التكامل والنشر</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">View of Data</span> و <span class="en">Instances and Schemas</span></h2>
+<h2 class="sec"><span class="en">Software Process</span> &amp; <span class="en">Process Models</span> – العملية ونماذجها</h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">View of data</span></td><td>عرض البيانات</td></tr>
-<tr><td><span class="en">Architecture</span></td><td>البنية / التصميم العام</td></tr>
-<tr><td><span class="en">View level</span></td><td>مستوى العرض: اللي المستخدم بيشوفه</td></tr>
-<tr><td><span class="en">Logical level</span></td><td>المستوى المنطقي: إيه البيانات وإيه علاقتها</td></tr>
-<tr><td><span class="en">Physical level</span></td><td>المستوى الفعلي: إزاي البيانات متخزنة على الديسك</td></tr>
-<tr><td><span class="en">Instance</span></td><td>الحالة: محتوى الـ <span class="en">DB</span> في لحظة معينة (زي قيمة المتغير)</td></tr>
-<tr><td><span class="en">Schema</span></td><td>الهيكل: التصميم العام للـ <span class="en">DB</span> (زي نوع المتغير)</td></tr>
-<tr><td><span class="en">Logical schema</span></td><td>الهيكل المنطقي</td></tr>
-<tr><td><span class="en">Physical schema</span></td><td>الهيكل الفعلي</td></tr>
-<tr><td><span class="en">Snapshot</span></td><td>لقطة في لحظة معينة</td></tr>
-<tr><td><span class="en">At a particular point in time</span></td><td>في لحظة زمنية معينة</td></tr>
-<tr><td><span class="en">Analogous to</span></td><td>مشابه لـ</td></tr>
-<tr><td><span class="en">Types and variables</span></td><td>أنواع ومتغيرات</td></tr>
-<tr><td><span class="en">Physical data independence</span></td><td>استقلال البيانات الفعلي</td></tr>
-<tr><td><span class="en">Ability to modify … without changing …</span></td><td>القدرة على تعديل … من غير ما نغيّر …</td></tr>
-<tr><td><span class="en">Interfaces</span></td><td>واجهات</td></tr>
-<tr><td><span class="en">Well defined</span></td><td>متعرّفة كويس</td></tr>
+<tr><td><span class="en">Software process</span></td><td>عملية تطوير السوفت وير: مجموعة أنشطة هدفها التطوير أو التطور</td></tr>
+<tr><td><span class="en">Set of activities</span></td><td>مجموعة أنشطة</td></tr>
+<tr><td><span class="en">Generic activities</span></td><td>أنشطة عامة بتتكرر في أي عملية</td></tr>
+<tr><td><span class="en">Specification</span></td><td>التوصيف: النظام يعمل إيه + قيود التطوير</td></tr>
+<tr><td><span class="en">Development</span></td><td>التطوير: إنتاج النظام</td></tr>
+<tr><td><span class="en">Validation</span></td><td>التحقق: هل ده اللي العميل عايزه؟</td></tr>
+<tr><td><span class="en">Evolution</span></td><td>التطور: تغيير السوفت وير مع تغيّر الاحتياجات</td></tr>
+<tr><td><span class="en">Changing demands</span></td><td>احتياجات متغيّرة</td></tr>
+<tr><td><span class="en">Software process model</span></td><td>نموذج العملية: تمثيل مبسّط للعملية من زاوية معينة</td></tr>
+<tr><td><span class="en">Simplified representation</span></td><td>تمثيل مبسّط</td></tr>
+<tr><td><span class="en">Specific perspective</span></td><td>منظور محدد</td></tr>
+<tr><td><span class="en">Workflow perspective</span></td><td>منظور سير العمل: تسلسل الأنشطة</td></tr>
+<tr><td><span class="en">Data-flow perspective</span></td><td>منظور تدفق البيانات: حركة المعلومات</td></tr>
+<tr><td><span class="en">Role / action perspective</span></td><td>منظور الدور والفعل: مين بيعمل إيه</td></tr>
+<tr><td><span class="en">Generic process models</span></td><td>نماذج عملية عامة</td></tr>
+<tr><td><span class="en">Waterfall</span></td><td>الشلال</td></tr>
+<tr><td><span class="en">Iterative development</span></td><td>تطوير تكراري</td></tr>
+<tr><td><span class="en">Component-based software engineering</span></td><td>هندسة برمجيات قائمة على المكونات</td></tr>
+<tr><td><span class="en">Abstract representation</span></td><td>تمثيل تجريدي</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">DDL</span> و <span class="en">DML</span> و <span class="en">SQL</span></h2>
+<h2 class="sec"><span class="en">Software Engineering Methods</span> &amp; <span class="en">CASE</span> – الطرق وأدوات <span class="en">CASE</span></h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">Data Definition Language (DDL)</span></td><td>لغة تعريف البيانات: بنعرّف بيها الـ <span class="en">schema</span></td></tr>
-<tr><td><span class="en">Specification notation</span></td><td>صيغة لتوصيف الحاجة</td></tr>
-<tr><td><span class="en">DDL compiler</span></td><td>بيحوّل الـ <span class="en">DDL</span> لـ <span class="en">table templates</span></td></tr>
-<tr><td><span class="en">Table templates</span></td><td>قوالب الجداول</td></tr>
-<tr><td><span class="en">Data dictionary</span></td><td>قاموس البيانات: بيخزن الـ <span class="en">metadata</span></td></tr>
-<tr><td><span class="en">Metadata</span></td><td>بيانات عن البيانات</td></tr>
-<tr><td><span class="en">Primary key</span></td><td>مفتاح أساسي (بيميّز كل صف)</td></tr>
-<tr><td><span class="en">Uniquely identifies</span></td><td>بيحدد بشكل فريد</td></tr>
-<tr><td><span class="en">Authorization</span></td><td>التصريح: مين يوصل لإيه</td></tr>
-<tr><td><span class="en">Who can access what</span></td><td>مين يدخل على إيه</td></tr>
-<tr><td><span class="en">Data Manipulation Language (DML)</span></td><td>لغة معالجة البيانات</td></tr>
-<tr><td><span class="en">Accessing and updating the data</span></td><td>الوصول للبيانات وتحديثها</td></tr>
-<tr><td><span class="en">Query language</span></td><td>لغة الاستعلام</td></tr>
-<tr><td><span class="en">Pure languages</span></td><td>لغات نظرية (للإثبات والتحسين)</td></tr>
-<tr><td><span class="en">Commercial languages</span></td><td>لغات تجارية (زي <span class="en">SQL</span>)</td></tr>
-<tr><td><span class="en">Relational algebra</span></td><td>الجبر العلائقي</td></tr>
-<tr><td><span class="en">Tuple relational calculus</span></td><td>حساب العلاقات للصفوف</td></tr>
-<tr><td><span class="en">Domain relational calculus</span></td><td>حساب العلاقات للنطاق</td></tr>
-<tr><td><span class="en">Proving properties</span></td><td>إثبات خصائص</td></tr>
-<tr><td><span class="en">Computational power</span></td><td>القوة الحسابية</td></tr>
-<tr><td><span class="en">Optimization</span></td><td>تحسين</td></tr>
-<tr><td><span class="en">Procedural DML</span></td><td>إجرائية: تحدد إيه + إزاي</td></tr>
-<tr><td><span class="en">Declarative (non-procedural) DML</span></td><td>تقريرية: تحدد إيه بس (زي <span class="en">SQL</span>)</td></tr>
-<tr><td><span class="en">Information retrieval</span></td><td>استرجاع المعلومات</td></tr>
-<tr><td><span class="en">Turing machine</span></td><td>آلة تورينج: تقدر تحسب أي حاجة</td></tr>
-<tr><td><span class="en">Embedded SQL</span></td><td><span class="en">SQL</span> مدمجة جوه لغة تانية</td></tr>
-<tr><td><span class="en">Host language</span></td><td>اللغة المضيفة (<span class="en">Java / C / Python</span>)</td></tr>
-<tr><td><span class="en">Application program interface (API)</span></td><td>واجهة برمجة التطبيقات (زي <span class="en">ODBC / JDBC</span>)</td></tr>
-<tr><td><span class="en">Application programs</span></td><td>برامج التطبيقات</td></tr>
-<tr><td><span class="en">Input from users / Output to displays</span></td><td>إدخال من المستخدم / عرض على الشاشة</td></tr>
-<tr><td><span class="en">Communication over the network</span></td><td>الاتصال عبر الشبكة</td></tr>
-<tr><td><span class="en">Takes as input / Returns</span></td><td>بتاخد مدخلات / بترجّع</td></tr>
+<tr><td><span class="en">Software engineering methods</span></td><td>طرق هندسة البرمجيات: أساليب منظمة للتطوير</td></tr>
+<tr><td><span class="en">Structured approaches</span></td><td>أساليب منظّمة</td></tr>
+<tr><td><span class="en">System models</span></td><td>نماذج النظام</td></tr>
+<tr><td><span class="en">Notations</span></td><td>رموز / صيغ كتابة (للرسم والتوصيف)</td></tr>
+<tr><td><span class="en">Model descriptions</span></td><td>وصف النماذج: الرسومات اللي لازم تتعمل</td></tr>
+<tr><td><span class="en">Rules</span></td><td>قواعد: قيود على نماذج النظام</td></tr>
+<tr><td><span class="en">Recommendations</span></td><td>توصيات: نصايح لتصميم كويس</td></tr>
+<tr><td><span class="en">Process guidance</span></td><td>إرشاد العملية: الأنشطة اللي نمشي عليها</td></tr>
+<tr><td><span class="en">CASE (Computer-Aided Software Engineering)</span></td><td>هندسة البرمجيات بمساعدة الكمبيوتر</td></tr>
+<tr><td><span class="en">Automated support</span></td><td>دعم آلي</td></tr>
+<tr><td><span class="en">Method support</span></td><td>دعم الـ <span class="en">methods</span></td></tr>
+<tr><td><span class="en">Upper-CASE</span></td><td>أدوات المراحل المبكرة (متطلبات وتصميم)</td></tr>
+<tr><td><span class="en">Lower-CASE</span></td><td>أدوات المراحل المتأخرة (برمجة وتصحيح واختبار)</td></tr>
+<tr><td><span class="en">Graphical editors</span></td><td>محررات رسومية لنماذج النظام</td></tr>
+<tr><td><span class="en">Data dictionary</span></td><td>قاموس بيانات: لإدارة عناصر التصميم</td></tr>
+<tr><td><span class="en">Graphical UI builder</span></td><td>أداة رسومية لبناء واجهة المستخدم</td></tr>
+<tr><td><span class="en">Debuggers</span></td><td>أدوات تصحيح الأخطاء</td></tr>
+<tr><td><span class="en">Program fault finding</span></td><td>اكتشاف أخطاء البرنامج</td></tr>
+<tr><td><span class="en">Automated translators</span></td><td>مترجمات آلية: بتولّد نسخ جديدة من البرنامج</td></tr>
+<tr><td><span class="en">Checking diagram consistency</span></td><td>فحص اتساق الرسومات</td></tr>
+<tr><td><span class="en">Keeping track of program tests</span></td><td>تتبع اختبارات البرنامج اللي اتعملت</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">Database Design</span> و <span class="en">Database Engine</span></h2>
+<h2 class="sec"><span class="en">Attributes of Good Software</span> &amp; <span class="en">Challenges</span> – صفات السوفت وير الجيد</h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">Database design</span></td><td>تصميم قاعدة البيانات</td></tr>
-<tr><td><span class="en">Logical design</span></td><td>تصميم منطقي: نحدد الـ <span class="en">schema</span></td></tr>
-<tr><td><span class="en">Physical design</span></td><td>تصميم فعلي: نحدد التخزين على الديسك</td></tr>
-<tr><td><span class="en">Good collection of relation schemas</span></td><td>مجموعة هياكل جداول كويسة</td></tr>
-<tr><td><span class="en">Business decision</span></td><td>قرار عملي: نسجّل أنهي <span class="en">attributes</span></td></tr>
-<tr><td><span class="en">Computer Science decision</span></td><td>قرار تقني: نوزع الـ <span class="en">attributes</span> على الجداول</td></tr>
-<tr><td><span class="en">Layout</span></td><td>التخطيط / الترتيب</td></tr>
-<tr><td><span class="en">Database engine</span></td><td>محرك قاعدة البيانات</td></tr>
-<tr><td><span class="en">Modules</span></td><td>وحدات</td></tr>
-<tr><td><span class="en">Responsibilities</span></td><td>مسؤوليات</td></tr>
-<tr><td><span class="en">Functional components</span></td><td>المكونات الوظيفية</td></tr>
-<tr><td><span class="en">Storage manager</span></td><td>مدير التخزين</td></tr>
-<tr><td><span class="en">Query processor</span></td><td>معالج الاستعلامات</td></tr>
-<tr><td><span class="en">Transaction management</span></td><td>إدارة المعاملات</td></tr>
-<tr><td><span class="en">Interface</span></td><td>واجهة وسيطة</td></tr>
-<tr><td><span class="en">Low-level data</span></td><td>بيانات منخفضة المستوى (على الديسك)</td></tr>
-<tr><td><span class="en">OS file manager</span></td><td>مدير الملفات في نظام التشغيل</td></tr>
-<tr><td><span class="en">Efficient storing, retrieving and updating</span></td><td>تخزين واسترجاع وتحديث بكفاءة</td></tr>
-<tr><td><span class="en">Authorization and integrity manager</span></td><td>مدير التصاريح والسلامة</td></tr>
-<tr><td><span class="en">Transaction manager</span></td><td>مدير المعاملات</td></tr>
-<tr><td><span class="en">File manager</span></td><td>مدير الملفات</td></tr>
-<tr><td><span class="en">Buffer manager</span></td><td>مدير الذاكرة المؤقتة (الـ <span class="en">buffer</span>)</td></tr>
-<tr><td><span class="en">Data structures</span></td><td>هياكل بيانات</td></tr>
-<tr><td><span class="en">Data files</span></td><td>ملفات البيانات: بتخزن الـ <span class="en">DB</span> نفسها</td></tr>
-<tr><td><span class="en">Indices (index)</span></td><td>فهارس: بتسرّع الوصول للبيانات</td></tr>
-<tr><td><span class="en">Pointers</span></td><td>مؤشرات (بتشاور على مكان البيانات)</td></tr>
-<tr><td><span class="en">DDL interpreter</span></td><td>مفسّر <span class="en">DDL</span>: يسجل التعريفات في الـ <span class="en">data dictionary</span></td></tr>
-<tr><td><span class="en">DML compiler</span></td><td>مترجم <span class="en">DML</span>: يحوّله لـ <span class="en">evaluation plan</span></td></tr>
-<tr><td><span class="en">Evaluation plan</span></td><td>خطة التنفيذ</td></tr>
-<tr><td><span class="en">Low-level instructions</span></td><td>تعليمات منخفضة المستوى</td></tr>
-<tr><td><span class="en">Query optimization</span></td><td>تحسين الاستعلام</td></tr>
-<tr><td><span class="en">Lowest cost</span></td><td>أقل تكلفة</td></tr>
-<tr><td><span class="en">Alternatives</span></td><td>بدائل</td></tr>
-<tr><td><span class="en">Query evaluation engine</span></td><td>محرك تنفيذ الاستعلام</td></tr>
-<tr><td><span class="en">Query processing</span></td><td>معالجة الاستعلام</td></tr>
-<tr><td><span class="en">Parsing and translation</span></td><td>التحليل والترجمة</td></tr>
-<tr><td><span class="en">Evaluation</span></td><td>التنفيذ</td></tr>
-<tr><td><span class="en">Transaction</span></td><td>معاملة: مجموعة عمليات بتعمل وظيفة منطقية واحدة</td></tr>
-<tr><td><span class="en">Collection of operations</span></td><td>مجموعة عمليات</td></tr>
-<tr><td><span class="en">Single logical function</span></td><td>وظيفة منطقية واحدة</td></tr>
-<tr><td><span class="en">Consistent (correct) state</span></td><td>حالة متسقة (صح)</td></tr>
-<tr><td><span class="en">System failures</span></td><td>أعطال النظام</td></tr>
-<tr><td><span class="en">Power failures</span></td><td>انقطاع الكهرباء</td></tr>
-<tr><td><span class="en">OS crashes</span></td><td>انهيار نظام التشغيل</td></tr>
-<tr><td><span class="en">Concurrency-control manager</span></td><td>مدير التحكم في التزامن</td></tr>
-<tr><td><span class="en">Concurrent transactions</span></td><td>معاملات متزامنة</td></tr>
+<tr><td><span class="en">Attributes of good software</span></td><td>صفات السوفت وير الجيد</td></tr>
+<tr><td><span class="en">Required functionality and performance</span></td><td>الوظائف والأداء المطلوبين</td></tr>
+<tr><td><span class="en">Maintainability</span></td><td>قابلية الصيانة: يتطور مع تغيّر الاحتياجات</td></tr>
+<tr><td><span class="en">Maintainable</span></td><td>سهل الصيانة</td></tr>
+<tr><td><span class="en">Dependability</span></td><td>الاعتمادية: موثوق فيه</td></tr>
+<tr><td><span class="en">Dependable</span></td><td>يُعتمد عليه</td></tr>
+<tr><td><span class="en">Efficiency</span></td><td>الكفاءة: ميهدرش موارد النظام</td></tr>
+<tr><td><span class="en">System resources</span></td><td>موارد النظام</td></tr>
+<tr><td><span class="en">Acceptability</span></td><td>القبول: المستخدمين يقبلوه</td></tr>
+<tr><td><span class="en">Understandable</span></td><td>مفهوم</td></tr>
+<tr><td><span class="en">Usable / Usability</span></td><td>سهل الاستخدام / قابلية الاستخدام</td></tr>
+<tr><td><span class="en">Compatible with other systems</span></td><td>متوافق مع أنظمة تانية</td></tr>
+<tr><td><span class="en">Key challenges</span></td><td>التحديات الرئيسية</td></tr>
+<tr><td><span class="en">Heterogeneity</span></td><td>التنوّع: منصات وبيئات تشغيل مختلفة</td></tr>
+<tr><td><span class="en">Heterogeneous platforms</span></td><td>منصات متنوعة</td></tr>
+<tr><td><span class="en">Execution environments</span></td><td>بيئات التشغيل</td></tr>
+<tr><td><span class="en">Faster delivery</span></td><td>تسليم أسرع</td></tr>
+<tr><td><span class="en">Trust</span></td><td>الثقة: إثبات إن المستخدمين يقدروا يثقوا في السوفت وير</td></tr>
+<tr><td><span class="en">Techniques</span></td><td>تقنيات / أساليب</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">Architecture</span> و <span class="en">Users</span> و <span class="en">DBA</span></h2>
+<h2 class="sec"><span class="en">Professional</span> &amp; <span class="en">Ethical Responsibility</span> – المسؤولية المهنية والأخلاقية</h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">Centralized databases</span></td><td>قواعد بيانات مركزية (جهاز واحد)</td></tr>
-<tr><td><span class="en">Cores</span></td><td>أنوية المعالج</td></tr>
-<tr><td><span class="en">Shared memory</span></td><td>ذاكرة مشتركة</td></tr>
-<tr><td><span class="en">Client-server</span></td><td>عميل وخادم</td></tr>
-<tr><td><span class="en">On behalf of</span></td><td>نيابةً عن</td></tr>
-<tr><td><span class="en">Parallel databases</span></td><td>قواعد بيانات متوازية</td></tr>
-<tr><td><span class="en">Shared disk / Shared nothing</span></td><td>ديسك مشترك / مفيش حاجة مشتركة</td></tr>
-<tr><td><span class="en">Distributed databases</span></td><td>قواعد بيانات موزعة</td></tr>
-<tr><td><span class="en">Geographical distribution</span></td><td>توزيع جغرافي</td></tr>
-<tr><td><span class="en">Schema/data heterogeneity</span></td><td>اختلاف الـ <span class="en">schema</span> والبيانات</td></tr>
-<tr><td><span class="en">Two-tier architecture</span></td><td>التطبيق على الـ <span class="en">client</span> وبيكلم الـ <span class="en">server</span> مباشرةً</td></tr>
-<tr><td><span class="en">Three-tier architecture</span></td><td><span class="en">client → application server → database</span></td></tr>
-<tr><td><span class="en">Front end</span></td><td>الواجهة الأمامية</td></tr>
-<tr><td><span class="en">Forms interface</span></td><td>واجهة فورمات</td></tr>
-<tr><td><span class="en">Resides</span></td><td>موجود في</td></tr>
-<tr><td><span class="en">Invokes</span></td><td>يستدعي</td></tr>
-<tr><td><span class="en">Naive users</span></td><td>مستخدمين عاديين: بيشغلوا تطبيقات جاهزة</td></tr>
-<tr><td><span class="en">Unsophisticated</span></td><td>مش متمرسين</td></tr>
-<tr><td><span class="en">Application programmers</span></td><td>مبرمجو التطبيقات</td></tr>
-<tr><td><span class="en">Computer professionals</span></td><td>متخصصين كمبيوتر</td></tr>
-<tr><td><span class="en">Sophisticated users</span></td><td>مستخدمين متقدمين: بيستخدموا <span class="en">query language</span> من غير برامج</td></tr>
-<tr><td><span class="en">Data analysis software</span></td><td>برامج تحليل البيانات</td></tr>
-<tr><td><span class="en">Specialized users</span></td><td>مستخدمين متخصصين: تطبيقات خاصة (<span class="en">CAD</span>، صوت، فيديو)</td></tr>
-<tr><td><span class="en">CAD</span></td><td>تصميم بمساعدة الكمبيوتر</td></tr>
-<tr><td><span class="en">Graphic data / Audio / Video</span></td><td>بيانات رسومية / صوت / فيديو</td></tr>
-<tr><td><span class="en">Traditional data-processing framework</span></td><td>إطار معالجة البيانات التقليدي</td></tr>
-<tr><td><span class="en">Database administrator (DBA)</span></td><td>مدير قاعدة البيانات</td></tr>
-<tr><td><span class="en">Central control</span></td><td>تحكم مركزي</td></tr>
-<tr><td><span class="en">Schema definition</span></td><td>تعريف الـ <span class="en">schema</span></td></tr>
-<tr><td><span class="en">Storage structure and access-method definition</span></td><td>تعريف هيكل التخزين وطرق الوصول</td></tr>
-<tr><td><span class="en">Schema and physical-organization modification</span></td><td>تعديل الـ <span class="en">schema</span> والتنظيم الفعلي</td></tr>
-<tr><td><span class="en">Granting of authorization</span></td><td>منح التصاريح</td></tr>
-<tr><td><span class="en">Routine maintenance</span></td><td>صيانة دورية</td></tr>
-<tr><td><span class="en">Periodically backing up</span></td><td>عمل نسخة احتياطية بشكل دوري</td></tr>
-<tr><td><span class="en">Free disk space</span></td><td>مساحة ديسك فاضية</td></tr>
-<tr><td><span class="en">Upgrading</span></td><td>ترقية / زيادة</td></tr>
-<tr><td><span class="en">Monitoring jobs</span></td><td>مراقبة المهام</td></tr>
-<tr><td><span class="en">Performance is degraded</span></td><td>الأداء يقل</td></tr>
-<tr><td><span class="en">Expensive tasks</span></td><td>مهام تقيلة على النظام</td></tr>
+<tr><td><span class="en">Professional responsibility</span></td><td>المسؤولية المهنية</td></tr>
+<tr><td><span class="en">Ethical responsibility</span></td><td>المسؤولية الأخلاقية</td></tr>
+<tr><td><span class="en">Ethical behaviour</span></td><td>السلوك الأخلاقي</td></tr>
+<tr><td><span class="en">Honest</span></td><td>أمين / صادق</td></tr>
+<tr><td><span class="en">Respected as professionals</span></td><td>محترمين كمحترفين</td></tr>
+<tr><td><span class="en">Confidentiality</span></td><td>السرية</td></tr>
+<tr><td><span class="en">Confidentiality agreement</span></td><td>اتفاقية سرية</td></tr>
+<tr><td><span class="en">Employers or clients</span></td><td>أصحاب العمل أو العملاء</td></tr>
+<tr><td><span class="en">Competence</span></td><td>الكفاءة / مستوى المهارة</td></tr>
+<tr><td><span class="en">Level of competence</span></td><td>مستوى الكفاءة</td></tr>
+<tr><td><span class="en">Knowingly accept work</span></td><td>يقبل شغل وهو عارف</td></tr>
+<tr><td><span class="en">Intellectual property rights</span></td><td>حقوق الملكية الفكرية</td></tr>
+<tr><td><span class="en">Patents</span></td><td>براءات الاختراع</td></tr>
+<tr><td><span class="en">Copyright</span></td><td>حقوق النشر</td></tr>
+<tr><td><span class="en">Computer misuse</span></td><td>إساءة استخدام الكمبيوتر</td></tr>
+<tr><td><span class="en">Dissemination of viruses</span></td><td>نشر الفيروسات</td></tr>
+<tr><td><span class="en">Code of conduct</span></td><td>مدونة السلوك</td></tr>
+<tr><td><span class="en">Professional societies</span></td><td>جمعيات مهنية</td></tr>
+<tr><td><span class="en">Standards of behaviour</span></td><td>معايير السلوك</td></tr>
+<tr><td><span class="en">Wider responsibilities</span></td><td>مسؤوليات أوسع</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">History of Database Systems</span></h2>
+<h2 class="sec"><span class="en">Lecture</span> 2 – <span class="en">Software Process Models</span>: <span class="en">Waterfall</span></h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">Magnetic tapes</span></td><td>شرايط مغناطيسية</td></tr>
-<tr><td><span class="en">Sequential access</span></td><td>وصول متسلسل</td></tr>
-<tr><td><span class="en">Punched cards</span></td><td>كروت مثقبة</td></tr>
-<tr><td><span class="en">Hard disks</span></td><td>هارد ديسك</td></tr>
-<tr><td><span class="en">Direct access</span></td><td>وصول مباشر</td></tr>
+<tr><td><span class="en">The waterfall model</span></td><td>نموذج الشلال: مراحل منفصلة ومتتابعة</td></tr>
+<tr><td><span class="en">Separate and distinct phases</span></td><td>مراحل منفصلة ومميزة</td></tr>
+<tr><td><span class="en">Requirements analysis and definition</span></td><td>تحليل المتطلبات وتعريفها</td></tr>
+<tr><td><span class="en">System and software design</span></td><td>تصميم النظام والسوفت وير</td></tr>
+<tr><td><span class="en">Implementation and unit testing</span></td><td>التنفيذ واختبار الوحدات</td></tr>
+<tr><td><span class="en">Integration and system testing</span></td><td>التكامل واختبار النظام</td></tr>
+<tr><td><span class="en">Operation and maintenance</span></td><td>التشغيل والصيانة</td></tr>
+<tr><td><span class="en">Phase has to be complete before the next</span></td><td>لازم المرحلة تخلص قبل اللي بعدها</td></tr>
+<tr><td><span class="en">Main drawback</span></td><td>العيب الرئيسي</td></tr>
+<tr><td><span class="en">Difficulty of accommodating change</span></td><td>صعوبة استيعاب التغيير</td></tr>
+<tr><td><span class="en">Process is underway</span></td><td>العملية بدأت فعلاً</td></tr>
+<tr><td><span class="en">Inflexible partitioning</span></td><td>تقسيم جامد</td></tr>
+<tr><td><span class="en">Changing customer requirements</span></td><td>متطلبات العميل المتغيرة</td></tr>
+<tr><td><span class="en">Well-understood requirements</span></td><td>متطلبات مفهومة كويس</td></tr>
+<tr><td><span class="en">Stable requirements</span></td><td>متطلبات ثابتة</td></tr>
+<tr><td><span class="en">Large systems engineering projects</span></td><td>مشاريع هندسة أنظمة كبيرة</td></tr>
+<tr><td><span class="en">Several sites</span></td><td>أكتر من موقع</td></tr>
+<tr><td><span class="en">Pros</span></td><td>المميزات</td></tr>
+<tr><td><span class="en">Cons</span></td><td>العيوب</td></tr>
+<tr><td><span class="en">Easy to understand and plan</span></td><td>سهل الفهم والتخطيط</td></tr>
+<tr><td><span class="en">Testing occurs late</span></td><td>الاختبار بييجي متأخر</td></tr>
+<tr><td><span class="en">Customer approval is at the end</span></td><td>موافقة العميل في الآخر</td></tr>
+</table></div>
+<h2 class="sec"><span class="en">Evolutionary Development</span> &amp; <span class="en">Prototyping</span> – التطوير التطوري والنموذج الأولي</h2>
+<div class="tw"><table>
+<tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
+<tr><td><span class="en">Evolutionary development</span></td><td>تطوير تطوّري: توصيف وتطوير وتحقق بيتداخلوا</td></tr>
+<tr><td><span class="en">Exploratory development</span></td><td>تطوير استكشافي: نشتغل مع العميل ونطوّر النظام النهائي</td></tr>
+<tr><td><span class="en">Initial outline specification</span></td><td>توصيف مبدئي مختصر</td></tr>
+<tr><td><span class="en">Throw-away prototyping</span></td><td>نموذج أولي بيترمي: هدفه نفهم المتطلبات</td></tr>
+<tr><td><span class="en">Poorly understood requirements</span></td><td>متطلبات مش مفهومة كويس</td></tr>
+<tr><td><span class="en">Clarify what is really needed</span></td><td>نوضّح المطلوب فعلاً</td></tr>
 <tr><td><span class="en">Prototype</span></td><td>نموذج أولي</td></tr>
-<tr><td><span class="en">Commercial systems</span></td><td>أنظمة تجارية</td></tr>
-<tr><td><span class="en">Industrial standard</span></td><td>معيار صناعي</td></tr>
-<tr><td><span class="en">Decision support</span></td><td>دعم القرار</td></tr>
-<tr><td><span class="en">Data mining</span></td><td>تنقيب البيانات</td></tr>
-<tr><td><span class="en">Data warehouses</span></td><td>مخازن بيانات</td></tr>
-<tr><td><span class="en">Multi-terabyte</span></td><td>عدة تيرابايت</td></tr>
-<tr><td><span class="en">Web commerce</span></td><td>التجارة على الويب</td></tr>
-<tr><td><span class="en">Big data</span></td><td>البيانات الضخمة</td></tr>
-<tr><td><span class="en">NoSQL</span></td><td>أنظمة غير علائقية</td></tr>
-<tr><td><span class="en">Map reduce</span></td><td>نموذج لمعالجة البيانات الضخمة</td></tr>
-<tr><td><span class="en">Massively parallel</span></td><td>توازي ضخم</td></tr>
-<tr><td><span class="en">Multi-core main-memory databases</span></td><td><span class="en">DB</span> في الذاكرة الرئيسية على معالجات متعددة الأنوية</td></tr>
-<tr><td><span class="en">Evolve</span></td><td>يتطور</td></tr>
-<tr><td><span class="en">Emergence</span></td><td>ظهور</td></tr>
-<tr><td><span class="en">Widespread use</span></td><td>انتشار واسع</td></tr>
+<tr><td><span class="en">Rapid prototyping</span></td><td>نماذج أولية سريعة</td></tr>
+<tr><td><span class="en">Lack of process visibility</span></td><td>مفيش رؤية واضحة للعملية</td></tr>
+<tr><td><span class="en">Poorly structured systems</span></td><td>أنظمة هيكلها ضعيف</td></tr>
+<tr><td><span class="en">Special skills</span></td><td>مهارات خاصة</td></tr>
+<tr><td><span class="en">Applicability</span></td><td>مجال الاستخدام</td></tr>
+<tr><td><span class="en">Interactive systems</span></td><td>أنظمة تفاعلية</td></tr>
+<tr><td><span class="en">User interface</span></td><td>واجهة المستخدم</td></tr>
+<tr><td><span class="en">Short-lifetime systems</span></td><td>أنظمة عمرها قصير</td></tr>
+<tr><td><span class="en">Reduced impact of requirement changes</span></td><td>تأثير أقل لتغيير المتطلبات</td></tr>
+<tr><td><span class="en">Customer is involved early and often</span></td><td>العميل بيشارك بدري وكتير</td></tr>
+<tr><td><span class="en">Reduced likelihood of product rejection</span></td><td>احتمال رفض المنتج أقل</td></tr>
+<tr><td><span class="en">Customer involvement may cause delays</span></td><td>مشاركة العميل ممكن تأخّر</td></tr>
+<tr><td><span class="en">Work lost in a throwaway prototype</span></td><td>شغل بيضيع في النموذج اللي بيترمي</td></tr>
+<tr><td><span class="en">Hard to plan and manage</span></td><td>صعب تخطط وتدير</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">Chapter</span> 2 – <span class="en">Relational Model</span> و <span class="en">Keys</span></h2>
+<h2 class="sec"><span class="en">Process Iteration</span> – التكرار: <span class="en">Incremental</span> &amp; <span class="en">Spiral</span></h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">Structure of relational databases</span></td><td>هيكل قواعد البيانات العلائقية</td></tr>
-<tr><td><span class="en">Database schema</span></td><td>الهيكل المنطقي للـ <span class="en">DB</span></td></tr>
-<tr><td><span class="en">Keys</span></td><td>المفاتيح</td></tr>
-<tr><td><span class="en">Schema diagrams</span></td><td>رسومات الـ <span class="en">schema</span></td></tr>
-<tr><td><span class="en">Relation</span></td><td>علاقة = جدول (<span class="en">set</span> من الـ <span class="en">tuples</span>)</td></tr>
-<tr><td><span class="en">Attributes (columns)</span></td><td>الأعمدة</td></tr>
-<tr><td><span class="en">Tuples (rows)</span></td><td>الصفوف</td></tr>
-<tr><td><span class="en">Domain of the attribute</span></td><td>مجموعة القيم المسموحة للعمود</td></tr>
-<tr><td><span class="en">Set of allowed values</span></td><td>مجموعة القيم المسموحة</td></tr>
-<tr><td><span class="en">Atomic</span></td><td>غير قابلة للتجزئة</td></tr>
-<tr><td><span class="en">Indivisible</span></td><td>مينفعش تتقسم</td></tr>
-<tr><td><span class="en">Null</span></td><td>قيمة مجهولة / فاضية (عضو في كل <span class="en">domain</span>)</td></tr>
-<tr><td><span class="en">Complications</span></td><td>تعقيدات</td></tr>
-<tr><td><span class="en">Relations are unordered</span></td><td>ترتيب الصفوف مش مهم</td></tr>
-<tr><td><span class="en">Order of tuples is irrelevant</span></td><td>ترتيب الـ <span class="en">tuples</span> ملوش أهمية</td></tr>
-<tr><td><span class="en">Arbitrary order</span></td><td>أي ترتيب</td></tr>
-<tr><td><span class="en">Database instance</span></td><td>لقطة من البيانات في لحظة معينة</td></tr>
-<tr><td><span class="en">Superkey</span></td><td>مفتاح فائق: يميّز الصف بشكل فريد</td></tr>
-<tr><td><span class="en">Sufficient to identify</span></td><td>كفاية لتحديد</td></tr>
-<tr><td><span class="en">Unique tuple</span></td><td>صف فريد</td></tr>
-<tr><td><span class="en">Candidate key</span></td><td>مفتاح مرشح: <span class="en">superkey</span> أصغر ما يمكن</td></tr>
-<tr><td><span class="en">Minimal</span></td><td>أصغر ما يمكن</td></tr>
-<tr><td><span class="en">Primary key</span></td><td>المفتاح الأساسي: واحد من الـ <span class="en">candidate keys</span></td></tr>
-<tr><td><span class="en">Foreign key constraint</span></td><td>قيد المفتاح الأجنبي</td></tr>
-<tr><td><span class="en">Referencing relation</span></td><td>الجدول اللي فيه الـ <span class="en">FK</span> (بيشاور)</td></tr>
-<tr><td><span class="en">Referenced relation</span></td><td>الجدول اللي بيتشاور عليه</td></tr>
-<tr><td><span class="en">Must appear in another relation</span></td><td>لازم تكون موجودة في جدول تاني</td></tr>
-<tr><td><span class="en">Schema diagram</span></td><td>رسمة بتوضح الجداول والمفاتيح والعلاقات</td></tr>
+<tr><td><span class="en">Process iteration</span></td><td>تكرار العملية: الرجوع لمراحل سابقة وتعديلها</td></tr>
+<tr><td><span class="en">Requirements ALWAYS evolve</span></td><td>المتطلبات دايماً بتتطور</td></tr>
+<tr><td><span class="en">Earlier stages are reworked</span></td><td>المراحل السابقة بيعاد الشغل فيها</td></tr>
+<tr><td><span class="en">Incremental delivery</span></td><td>تسليم تزايدي: التسليم على أجزاء</td></tr>
+<tr><td><span class="en">Spiral development</span></td><td>تطوير حلزوني</td></tr>
+<tr><td><span class="en">Increment</span></td><td>جزء / إصدار تزايدي من النظام</td></tr>
+<tr><td><span class="en">Single delivery</span></td><td>تسليم واحد</td></tr>
+<tr><td><span class="en">Broken down into increments</span></td><td>مقسّم لأجزاء</td></tr>
+<tr><td><span class="en">Required functionality</span></td><td>الوظائف المطلوبة</td></tr>
+<tr><td><span class="en">User requirements are ranked by priority</span></td><td>متطلبات المستخدم متصنّفة حسب الأولوية</td></tr>
+<tr><td><span class="en">Highest priority</span></td><td>الأولوية الأعلى</td></tr>
+<tr><td><span class="en">Early increments</span></td><td>الأجزاء الأولى</td></tr>
+<tr><td><span class="en">Requirements are frozen</span></td><td>المتطلبات بتتجمّد</td></tr>
+<tr><td><span class="en">Customer value</span></td><td>قيمة للعميل</td></tr>
+<tr><td><span class="en">Act as a prototype</span></td><td>بتشتغل كنموذج أولي</td></tr>
+<tr><td><span class="en">Lower risk of project failure</span></td><td>مخاطر فشل أقل</td></tr>
+<tr><td><span class="en">Most testing</span></td><td>أكتر اختبار</td></tr>
+<tr><td><span class="en">Loop</span></td><td>حلقة (دورة)</td></tr>
+<tr><td><span class="en">Backtracking</span></td><td>الرجوع للخلف</td></tr>
+<tr><td><span class="en">No fixed phases</span></td><td>مفيش مراحل ثابتة</td></tr>
+<tr><td><span class="en">Risks are assessed and resolved</span></td><td>المخاطر بتتقيّم وتتحل</td></tr>
+<tr><td><span class="en">Spiral model sectors</span></td><td>أقسام النموذج الحلزوني</td></tr>
+<tr><td><span class="en">Objective setting</span></td><td>تحديد الأهداف</td></tr>
+<tr><td><span class="en">Risk assessment and reduction</span></td><td>تقييم المخاطر وتقليلها</td></tr>
+<tr><td><span class="en">Development and validation</span></td><td>التطوير والتحقق</td></tr>
+<tr><td><span class="en">Planning (review and plan next phase)</span></td><td>التخطيط (مراجعة المشروع وتخطيط المرحلة الجاية)</td></tr>
+<tr><td><span class="en">Continuous customer involvement</span></td><td>مشاركة العميل المستمرة</td></tr>
+<tr><td><span class="en">Development risks are managed</span></td><td>مخاطر التطوير بتتدار</td></tr>
+<tr><td><span class="en">Suitable for large, complex projects</span></td><td>مناسب للمشاريع الكبيرة المعقدة</td></tr>
+<tr><td><span class="en">Extensible products</span></td><td>منتجات قابلة للتوسعة</td></tr>
+<tr><td><span class="en">Risk analysis failures can doom the project</span></td><td>فشل تحليل المخاطر ممكن يدمّر المشروع</td></tr>
+<tr><td><span class="en">Requires an expert development team</span></td><td>محتاج فريق تطوير خبير</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">Relational Algebra</span></h2>
+<h2 class="sec"><span class="en">Process Activities</span> – أنشطة العملية: <span class="en">Specification</span> &amp; <span class="en">Design</span></h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">Algebraic language</span></td><td>لغة جبرية</td></tr>
-<tr><td><span class="en">Set of operations</span></td><td>مجموعة عمليات</td></tr>
-<tr><td><span class="en">One or two relations as input</span></td><td>علاقة أو اتنين كمدخلات</td></tr>
-<tr><td><span class="en">Produce a new relation</span></td><td>تنتج علاقة جديدة</td></tr>
-<tr><td><span class="en">Six basic operators</span></td><td>6 عمليات أساسية</td></tr>
-<tr><td><span class="en">Select (σ)</span></td><td>يختار صفوف بتحقق شرط</td></tr>
-<tr><td><span class="en">Project (π)</span></td><td>يختار أعمدة</td></tr>
-<tr><td><span class="en">Union (∪)</span></td><td>اتحاد</td></tr>
-<tr><td><span class="en">Set difference (−)</span></td><td>فرق</td></tr>
-<tr><td><span class="en">Cartesian product (×)</span></td><td>ضرب ديكارتي: كل صف مع كل صف</td></tr>
-<tr><td><span class="en">Rename (ρ)</span></td><td>إعادة تسمية</td></tr>
-<tr><td><span class="en">Predicate</span></td><td>شرط</td></tr>
-<tr><td><span class="en">Selection predicate</span></td><td>شرط الاختيار</td></tr>
-<tr><td><span class="en">Satisfy</span></td><td>يحقق</td></tr>
-<tr><td><span class="en">Comparisons</span></td><td>مقارنات</td></tr>
-<tr><td><span class="en">Connectives</span></td><td>أدوات ربط الشروط</td></tr>
-<tr><td><span class="en">∧ / ∨ / ¬</span></td><td>و / أو / نفي</td></tr>
-<tr><td><span class="en">Greater than / Less than</span></td><td>أكبر من / أصغر من</td></tr>
-<tr><td><span class="en">Equal / Not equal</span></td><td>يساوي / لا يساوي</td></tr>
-<tr><td><span class="en">Unary operation</span></td><td>عملية على علاقة واحدة</td></tr>
-<tr><td><span class="en">Left out</span></td><td>متشال</td></tr>
-<tr><td><span class="en">Erasing columns</span></td><td>مسح أعمدة</td></tr>
-<tr><td><span class="en">Duplicate rows removed</span></td><td>التكرار بيتشال</td></tr>
-<tr><td><span class="en">Relations are sets</span></td><td>العلاقات مجموعات</td></tr>
-<tr><td><span class="en">Composition</span></td><td>تركيب العمليات</td></tr>
-<tr><td><span class="en">Relational-algebra expression</span></td><td>تعبير جبر علائقي</td></tr>
-<tr><td><span class="en">Evaluates to a relation</span></td><td>ناتجه علاقة</td></tr>
-<tr><td><span class="en">Combine information</span></td><td>دمج معلومات</td></tr>
-<tr><td><span class="en">Possible pair of tuples</span></td><td>كل زوج ممكن من الصفوف</td></tr>
-<tr><td><span class="en">Distinguish attributes</span></td><td>نفرّق بين الأعمدة</td></tr>
-<tr><td><span class="en">Attaching the relation name</span></td><td>نضيف اسم الجدول قبل العمود</td></tr>
-<tr><td><span class="en">Join (⋈)</span></td><td>ربط جدولين على شرط (= <span class="en">select</span> + <span class="en">Cartesian product</span>)</td></tr>
-<tr><td><span class="en">Theta (θ) join</span></td><td>ربط بشرط θ</td></tr>
-<tr><td><span class="en">Arity</span></td><td>عدد الأعمدة</td></tr>
-<tr><td><span class="en">Same number of attributes</span></td><td>نفس عدد الأعمدة</td></tr>
-<tr><td><span class="en">Compatible domains</span></td><td>نطاقات متوافقة</td></tr>
-<tr><td><span class="en">Set intersection (∩)</span></td><td>تقاطع: الموجود في الاتنين</td></tr>
-<tr><td><span class="en">Assignment (←)</span></td><td>إسناد: نخزّن النتيجة في متغير مؤقت</td></tr>
-<tr><td><span class="en">Temporary relation variables</span></td><td>متغيرات مؤقتة</td></tr>
-<tr><td><span class="en">Sequential program</span></td><td>برنامج متسلسل</td></tr>
-<tr><td><span class="en">Aggregate functions</span></td><td>دوال تجميعية</td></tr>
-<tr><td><span class="en">Multiset</span></td><td>مجموعة مع تكرار</td></tr>
-<tr><td><span class="en">avg / min / max / sum / count</span></td><td>متوسط / أقل / أكبر / مجموع / عدد</td></tr>
-<tr><td><span class="en">Group by</span></td><td>تجميع حسب</td></tr>
-<tr><td><span class="en">Equivalent queries</span></td><td>استعلامات مكافئة: نفس النتيجة</td></tr>
+<tr><td><span class="en">Software specification</span></td><td>توصيف السوفت وير: إيه الخدمات المطلوبة والقيود</td></tr>
+<tr><td><span class="en">Services required</span></td><td>الخدمات المطلوبة</td></tr>
+<tr><td><span class="en">Constraints on the system's operation</span></td><td>قيود على تشغيل النظام</td></tr>
+<tr><td><span class="en">Requirements engineering process</span></td><td>عملية هندسة المتطلبات</td></tr>
+<tr><td><span class="en">Feasibility study</span></td><td>دراسة الجدوى</td></tr>
+<tr><td><span class="en">Requirements elicitation and analysis</span></td><td>استخلاص المتطلبات وتحليلها</td></tr>
+<tr><td><span class="en">Requirements specification</span></td><td>توصيف المتطلبات</td></tr>
+<tr><td><span class="en">Requirements validation</span></td><td>التحقق من المتطلبات</td></tr>
+<tr><td><span class="en">Software design and implementation</span></td><td>تصميم السوفت وير وتنفيذه</td></tr>
+<tr><td><span class="en">Executable system / program</span></td><td>نظام / برنامج قابل للتشغيل</td></tr>
+<tr><td><span class="en">Realises the specification</span></td><td>بيحقق التوصيف</td></tr>
+<tr><td><span class="en">Design process activities</span></td><td>أنشطة عملية التصميم</td></tr>
+<tr><td><span class="en">Abstract specification</span></td><td>توصيف تجريدي</td></tr>
+<tr><td><span class="en">Interface design</span></td><td>تصميم الواجهات</td></tr>
+<tr><td><span class="en">Component design</span></td><td>تصميم المكونات</td></tr>
+<tr><td><span class="en">Data structure design</span></td><td>تصميم هياكل البيانات</td></tr>
+<tr><td><span class="en">Algorithm design</span></td><td>تصميم الخوارزميات</td></tr>
+<tr><td><span class="en">Structured methods</span></td><td>طرق منظّمة لتصميم السوفت وير</td></tr>
+<tr><td><span class="en">Set of graphical models</span></td><td>مجموعة نماذج رسومية</td></tr>
+<tr><td><span class="en">Object model</span></td><td>نموذج الكائنات</td></tr>
+<tr><td><span class="en">Sequence model</span></td><td>نموذج التسلسل</td></tr>
+<tr><td><span class="en">State transition model</span></td><td>نموذج انتقال الحالات</td></tr>
+<tr><td><span class="en">Structural model</span></td><td>النموذج الهيكلي</td></tr>
+<tr><td><span class="en">Data-flow model</span></td><td>نموذج تدفق البيانات</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">Chapter</span> 3 – مقدمة <span class="en">SQL</span> و <span class="en">Data Types</span></h2>
+<h2 class="sec"><span class="en">Programming</span>, <span class="en">Debugging</span> &amp; <span class="en">Validation</span> – البرمجة والتصحيح والاختبار</h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">Structured Query Language (SQL)</span></td><td>لغة الاستعلام الهيكلية</td></tr>
-<tr><td><span class="en">Sequel</span></td><td>الاسم الأول لـ <span class="en">SQL</span> (من <span class="en">IBM</span>)</td></tr>
-<tr><td><span class="en">Renamed</span></td><td>اتغير اسمها</td></tr>
-<tr><td><span class="en">ANSI / ISO standard</span></td><td>معايير عالمية</td></tr>
-<tr><td><span class="en">Compliant</span></td><td>متوافق</td></tr>
-<tr><td><span class="en">Proprietary features</span></td><td>مميزات خاصة بشركة معينة</td></tr>
-<tr><td><span class="en">Integrity</span></td><td>السلامة (قيود الـ <span class="en">DDL</span>)</td></tr>
-<tr><td><span class="en">View definition</span></td><td>تعريف الـ <span class="en">views</span></td></tr>
-<tr><td><span class="en">Transaction control</span></td><td>التحكم في بداية المعاملات ونهايتها</td></tr>
-<tr><td><span class="en">Embedded SQL / Dynamic SQL</span></td><td><span class="en">SQL</span> داخل لغات البرمجة</td></tr>
-<tr><td><span class="en">General-purpose programming languages</span></td><td>لغات برمجة عامة</td></tr>
-<tr><td><span class="en">Access rights</span></td><td>صلاحيات الوصول</td></tr>
-<tr><td><span class="en">Domain types</span></td><td>أنواع البيانات</td></tr>
-<tr><td><span class="en">char(n)</span></td><td>نص طوله ثابت <span class="en">n</span></td></tr>
-<tr><td><span class="en">varchar(n)</span></td><td>نص طوله متغير بحد أقصى <span class="en">n</span></td></tr>
-<tr><td><span class="en">int / smallint</span></td><td>عدد صحيح / عدد صحيح صغير</td></tr>
-<tr><td><span class="en">numeric(p,d)</span></td><td>رقم عشري بدقة <span class="en">p</span> و<span class="en">d</span> أرقام بعد العلامة</td></tr>
-<tr><td><span class="en">Precision</span></td><td>الدقة</td></tr>
-<tr><td><span class="en">Digits to the right of the decimal point</span></td><td>أرقام بعد العلامة العشرية</td></tr>
-<tr><td><span class="en">Stored exactly</span></td><td>متخزن بالظبط</td></tr>
-<tr><td><span class="en">real / double precision</span></td><td>رقم عشري / عشري مضاعف الدقة</td></tr>
-<tr><td><span class="en">float(n)</span></td><td>رقم عشري بدقة <span class="en">n</span> على الأقل</td></tr>
-<tr><td><span class="en">Floating point</span></td><td>عدد عشري عائم</td></tr>
-<tr><td><span class="en">Machine-dependent</span></td><td>بيختلف حسب الجهاز</td></tr>
-<tr><td><span class="en">Fixed length / Variable length</span></td><td>طول ثابت / طول متغير</td></tr>
-<tr><td><span class="en">User-specified</span></td><td>بيحدده المستخدم</td></tr>
-<tr><td><span class="en">Create table</span></td><td>إنشاء جدول</td></tr>
-<tr><td><span class="en">Construct</span></td><td>جملة / تركيب</td></tr>
-<tr><td><span class="en">Integrity constraint</span></td><td>قيد سلامة</td></tr>
-<tr><td><span class="en">references</span></td><td>يشير إلى (بتتكتب مع <span class="en">foreign key</span>)</td></tr>
-<tr><td><span class="en">not null</span></td><td>ممنوع تبقى فاضية</td></tr>
-<tr><td><span class="en">Prevents any update that violates</span></td><td>بيمنع أي تعديل بيخالف القيد</td></tr>
+<tr><td><span class="en">Programming and debugging</span></td><td>البرمجة وتصحيح الأخطاء</td></tr>
+<tr><td><span class="en">Debugging</span></td><td>تصحيح الأخطاء</td></tr>
+<tr><td><span class="en">Faults / Errors</span></td><td>أخطاء / عيوب</td></tr>
+<tr><td><span class="en">Program testing</span></td><td>اختبار البرنامج</td></tr>
+<tr><td><span class="en">Verification and validation (V &amp; V)</span></td><td>التحقق والتصديق: النظام مطابق للتوصيف وبيحقق احتياجات العميل</td></tr>
+<tr><td><span class="en">Conforms to its specification</span></td><td>مطابق للتوصيف</td></tr>
+<tr><td><span class="en">Meets the requirements</span></td><td>بيحقق المتطلبات</td></tr>
+<tr><td><span class="en">Checking and review processes</span></td><td>عمليات فحص ومراجعة</td></tr>
+<tr><td><span class="en">System testing</span></td><td>اختبار النظام</td></tr>
+<tr><td><span class="en">Test cases</span></td><td>حالات اختبار</td></tr>
+<tr><td><span class="en">Derived from the specification</span></td><td>مشتقة من التوصيف</td></tr>
+<tr><td><span class="en">Real data to be processed</span></td><td>بيانات حقيقية هتتعالج</td></tr>
+<tr><td><span class="en">Testing stages</span></td><td>مراحل الاختبار</td></tr>
+<tr><td><span class="en">Component / Unit testing</span></td><td>اختبار المكونات / الوحدات: كل مكون لوحده</td></tr>
+<tr><td><span class="en">Components tested independently</span></td><td>مكونات بتتختبر باستقلالية</td></tr>
+<tr><td><span class="en">Functions or objects</span></td><td>دوال أو كائنات</td></tr>
+<tr><td><span class="en">Coherent groupings</span></td><td>مجموعات مترابطة</td></tr>
+<tr><td><span class="en">System testing (as a whole)</span></td><td>اختبار النظام ككل</td></tr>
+<tr><td><span class="en">Emergent properties</span></td><td>خصائص ناشئة (بتظهر لما الأجزاء تشتغل مع بعض)</td></tr>
+<tr><td><span class="en">Acceptance testing</span></td><td>اختبار القبول: بنستخدم بيانات العميل</td></tr>
+<tr><td><span class="en">Customer data</span></td><td>بيانات العميل</td></tr>
+<tr><td><span class="en">Customer's needs</span></td><td>احتياجات العميل</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">Updates to Tables</span> و <span class="en">Basic Query</span></h2>
+<h2 class="sec"><span class="en">Software Evolution</span> &amp; <span class="en">RUP</span> – تطور السوفت وير و <span class="en">RUP</span></h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">insert into … values</span></td><td>إضافة صف</td></tr>
-<tr><td><span class="en">delete from</span></td><td>مسح الصفوف (الجدول يفضل موجود)</td></tr>
-<tr><td><span class="en">drop table</span></td><td>مسح الجدول نفسه</td></tr>
-<tr><td><span class="en">alter table … add</span></td><td>إضافة عمود</td></tr>
-<tr><td><span class="en">alter table … drop</span></td><td>مسح عمود</td></tr>
-<tr><td><span class="en">Assigned null</span></td><td>بياخد <span class="en">null</span></td></tr>
-<tr><td><span class="en">Existing tuples</span></td><td>الصفوف الموجودة</td></tr>
-<tr><td><span class="en">Not supported</span></td><td>مش مدعوم</td></tr>
-<tr><td><span class="en">select / from / where</span></td><td>اختار / من / بشرط</td></tr>
-<tr><td><span class="en">Clause</span></td><td>جزء من جملة الـ <span class="en">SQL</span></td></tr>
-<tr><td><span class="en">Case insensitive</span></td><td>مش حساسة لحالة الحروف</td></tr>
-<tr><td><span class="en">Duplicates</span></td><td>تكرار</td></tr>
-<tr><td><span class="en">distinct</span></td><td>يشيل التكرار</td></tr>
-<tr><td><span class="en">all</span></td><td>يسيب التكرار</td></tr>
-<tr><td><span class="en">Asterisk (*)</span></td><td>كل الأعمدة</td></tr>
-<tr><td><span class="en">Literal</span></td><td>قيمة ثابتة</td></tr>
-<tr><td><span class="en">as</span></td><td>لتغيير الاسم (<span class="en">alias</span>)</td></tr>
-<tr><td><span class="en">Arithmetic expressions</span></td><td>تعبيرات حسابية</td></tr>
-<tr><td><span class="en">Constants or attributes</span></td><td>ثوابت أو أعمدة</td></tr>
-<tr><td><span class="en">Logical connectives (and, or, not)</span></td><td>و / أو / نفي</td></tr>
-<tr><td><span class="en">Comparison operators</span></td><td>عوامل المقارنة</td></tr>
-<tr><td><span class="en">Common attributes</span></td><td>أعمدة مشتركة</td></tr>
-<tr><td><span class="en">Renamed using the relation name</span></td><td>بيتغير اسمها بإضافة اسم الجدول</td></tr>
-<tr><td><span class="en">Self join</span></td><td>ربط الجدول بنفسه</td></tr>
-<tr><td><span class="en">Correlation name</span></td><td>اسم بديل للجدول (<span class="en">alias</span>)</td></tr>
-<tr><td><span class="en">Supervisor</span></td><td>مشرف</td></tr>
-<tr><td><span class="en">Direct and indirect</span></td><td>مباشر وغير مباشر</td></tr>
+<tr><td><span class="en">Software evolution</span></td><td>تطور السوفت وير (التعديل بعد الاستخدام)</td></tr>
+<tr><td><span class="en">Inherently flexible</span></td><td>مرن بطبيعته</td></tr>
+<tr><td><span class="en">Changing business circumstances</span></td><td>ظروف عمل متغيرة</td></tr>
+<tr><td><span class="en">Demarcation</span></td><td>فاصل / تمييز</td></tr>
+<tr><td><span class="en">Increasingly irrelevant</span></td><td>بقى أقل وأقل أهمية</td></tr>
+<tr><td><span class="en">Completely new systems</span></td><td>أنظمة جديدة بالكامل</td></tr>
+<tr><td><span class="en">Modifying the system after it is in use</span></td><td>تعديل النظام بعد ما بدأ استخدامه</td></tr>
+<tr><td><span class="en">Rational Unified Process (RUP)</span></td><td>العملية الموحدة (<span class="en">Rational</span>): نموذج عام بيفصل الأنشطة عن المراحل</td></tr>
+<tr><td><span class="en">Separates activities from phases</span></td><td>بيفصل الأنشطة عن المراحل</td></tr>
+<tr><td><span class="en">CASE technology</span></td><td>تكنولوجيا <span class="en">CASE</span></td></tr>
+<tr><td><span class="en">Activity automation</span></td><td>أتمتة الأنشطة</td></tr>
+<tr><td><span class="en">Routine activities</span></td><td>أنشطة روتينية</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">String Operations</span> و <span class="en">Order By</span> و <span class="en">Where</span></h2>
+<h2 class="sec"><span class="en">Lecture</span> 3 – <span class="en">Agility</span> – الرشاقة (<span class="en">Agile</span>)</h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">String operations</span></td><td>عمليات على النصوص</td></tr>
-<tr><td><span class="en">like</span></td><td>يشبه (بحث بنمط)</td></tr>
-<tr><td><span class="en">Pattern</span></td><td>نمط</td></tr>
-<tr><td><span class="en">Percent (%)</span></td><td>أي عدد من الحروف</td></tr>
-<tr><td><span class="en">Underscore (_)</span></td><td>حرف واحد</td></tr>
-<tr><td><span class="en">Substring</span></td><td>جزء من نص</td></tr>
-<tr><td><span class="en">Escape character</span></td><td>رمز للهروب (عشان نكتب % كحرف عادي)</td></tr>
-<tr><td><span class="en">Backslash (\)</span></td><td>الشرطة المائلة للخلف</td></tr>
-<tr><td><span class="en">Case sensitive</span></td><td>حساسة لحالة الحروف</td></tr>
-<tr><td><span class="en">Concatenation (||)</span></td><td>دمج نصين</td></tr>
-<tr><td><span class="en">Upper / lower case</span></td><td>حروف كبيرة / صغيرة</td></tr>
-<tr><td><span class="en">String length</span></td><td>طول النص</td></tr>
-<tr><td><span class="en">Extracting substrings</span></td><td>استخراج جزء من نص</td></tr>
-<tr><td><span class="en">Alphabetic order</span></td><td>ترتيب أبجدي</td></tr>
-<tr><td><span class="en">order by</span></td><td>ترتيب حسب</td></tr>
-<tr><td><span class="en">asc / desc</span></td><td>تصاعدي / تنازلي</td></tr>
-<tr><td><span class="en">Ascending is the default</span></td><td>التصاعدي هو الافتراضي</td></tr>
-<tr><td><span class="en">Sort on multiple attributes</span></td><td>ترتيب على أكتر من عمود</td></tr>
-<tr><td><span class="en">between … and</span></td><td>بين … و …</td></tr>
-<tr><td><span class="en">Tuple comparison</span></td><td>مقارنة صفوف كاملة</td></tr>
+<tr><td><span class="en">Agility</span></td><td>الرشاقة: سرعة الاستجابة والتكيّف مع التغيير</td></tr>
+<tr><td><span class="en">Agile process</span></td><td>عملية رشيقة</td></tr>
+<tr><td><span class="en">Rapid and adaptive response to change</span></td><td>استجابة سريعة ومتكيّفة مع التغيير</td></tr>
+<tr><td><span class="en">Effective communication</span></td><td>تواصل فعّال</td></tr>
+<tr><td><span class="en">Drawing the customer onto the team</span></td><td>ضم العميل للفريق</td></tr>
+<tr><td><span class="en">In control of the work performed</span></td><td>متحكم في الشغل اللي بيتعمل</td></tr>
+<tr><td><span class="en">Rapid, incremental delivery</span></td><td>تسليم سريع وتزايدي</td></tr>
+<tr><td><span class="en">Cost of change</span></td><td>تكلفة التغيير</td></tr>
+<tr><td><span class="en">Development schedule progress</span></td><td>تقدم جدول التطوير</td></tr>
+<tr><td><span class="en">Idealized cost of change</span></td><td>تكلفة التغيير المثالية</td></tr>
+<tr><td><span class="en">Conventional software process</span></td><td>عملية تقليدية</td></tr>
+<tr><td><span class="en">Scenarios</span></td><td>سيناريوهات: وصف العميل لإيه المطلوب</td></tr>
+<tr><td><span class="en">Customer feedback</span></td><td>تغذية راجعة من العميل</td></tr>
+<tr><td><span class="en">Plans are short-lived</span></td><td>الخطط عمرها قصير</td></tr>
+<tr><td><span class="en">Develops iteratively</span></td><td>يطوّر بشكل تكراري</td></tr>
+<tr><td><span class="en">Heavy emphasis on construction</span></td><td>تركيز كبير على البناء</td></tr>
+<tr><td><span class="en">Software increments</span></td><td>أجزاء السوفت وير المسلَّمة</td></tr>
+<tr><td><span class="en">Executable prototypes</span></td><td>نماذج أولية قابلة للتشغيل</td></tr>
+<tr><td><span class="en">Adapts as changes occur</span></td><td>يتكيّف لما التغييرات تحصل</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">Set Operations</span> و <span class="en">Null</span> و <span class="en">Aggregate</span></h2>
+<h2 class="sec"><span class="en">Agility Principles</span> – مبادئ الرشاقة</h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">Set operations</span></td><td>عمليات المجموعات</td></tr>
-<tr><td><span class="en">union</span></td><td>اتحاد</td></tr>
-<tr><td><span class="en">intersect</span></td><td>تقاطع</td></tr>
-<tr><td><span class="en">except</span></td><td>فرق (موجود في الأولى ومش في التانية)</td></tr>
-<tr><td><span class="en">union all / intersect all / except all</span></td><td>نفس العمليات مع الاحتفاظ بالتكرار</td></tr>
-<tr><td><span class="en">Automatically eliminates duplicates</span></td><td>بتشيل التكرار تلقائياً</td></tr>
-<tr><td><span class="en">Retain all duplicates</span></td><td>الاحتفاظ بكل التكرار</td></tr>
-<tr><td><span class="en">Null value</span></td><td>قيمة مجهولة أو مش موجودة</td></tr>
-<tr><td><span class="en">Unknown value</span></td><td>قيمة مجهولة</td></tr>
-<tr><td><span class="en">Value does not exist</span></td><td>القيمة مش موجودة</td></tr>
-<tr><td><span class="en">is null / is not null</span></td><td>فاضية / مش فاضية</td></tr>
-<tr><td><span class="en">Arithmetic expression involving null</span></td><td>أي عملية حسابية فيها <span class="en">null</span> = <span class="en">null</span></td></tr>
-<tr><td><span class="en">Comparison involving null</span></td><td>أي مقارنة فيها <span class="en">null</span> = <span class="en">unknown</span></td></tr>
-<tr><td><span class="en">Boolean operations</span></td><td>عمليات منطقية</td></tr>
-<tr><td><span class="en">Treated as false</span></td><td>بيتعامل معاها على إنها <span class="en">false</span></td></tr>
-<tr><td><span class="en">Evaluates to unknown</span></td><td>ناتجها <span class="en">unknown</span></td></tr>
-<tr><td><span class="en">Aggregate functions</span></td><td>دوال تجميعية (<span class="en">avg</span>, <span class="en">min</span>, <span class="en">max</span>, <span class="en">sum</span>, <span class="en">count</span>)</td></tr>
-<tr><td><span class="en">group by</span></td><td>تجميع حسب</td></tr>
-<tr><td><span class="en">having</span></td><td>شرط على المجموعات</td></tr>
-<tr><td><span class="en">Formation of groups</span></td><td>تكوين المجموعات</td></tr>
-<tr><td><span class="en">Applied after / before</span></td><td>بيتطبق بعد / قبل</td></tr>
-<tr><td><span class="en">Erroneous query</span></td><td>استعلام غلط</td></tr>
-<tr><td><span class="en">Must appear in the group by list</span></td><td>لازم يكون في قائمة الـ <span class="en">group by</span></td></tr>
-<tr><td><span class="en">Outside aggregate functions</span></td><td>برة الدوال التجميعية</td></tr>
+<tr><td><span class="en">Customer satisfaction</span></td><td>رضا العميل</td></tr>
+<tr><td><span class="en">Delivered as rapidly as possible</span></td><td>يتسلّم بأسرع ما يمكن</td></tr>
+<tr><td><span class="en">Welcome changes</span></td><td>نرحّب بالتغييرات</td></tr>
+<tr><td><span class="en">Frequently (weeks not months)</span></td><td>كل فترة قصيرة (أسابيع مش شهور)</td></tr>
+<tr><td><span class="en">Meaningful feedback</span></td><td>تغذية راجعة مفيدة</td></tr>
+<tr><td><span class="en">Motivated individuals</span></td><td>أفراد متحمسين</td></tr>
+<tr><td><span class="en">Face-to-face communication</span></td><td>تواصل وجهاً لوجه</td></tr>
+<tr><td><span class="en">Technical excellence</span></td><td>التميز التقني</td></tr>
+<tr><td><span class="en">Good design</span></td><td>تصميم جيد</td></tr>
+<tr><td><span class="en">Simplicity</span></td><td>البساطة</td></tr>
+<tr><td><span class="en">Avoids unnecessary work</span></td><td>بيتجنب الشغل الغير ضروري</td></tr>
+<tr><td><span class="en">Working software</span></td><td>سوفت وير شغّال: الهدف الأساسي</td></tr>
+<tr><td><span class="en">Sustainable pace</span></td><td>وتيرة قابلة للاستمرار</td></tr>
+<tr><td><span class="en">Work effectively for long periods</span></td><td>يشتغلوا بكفاءة لفترات طويلة</td></tr>
+<tr><td><span class="en">Self-organizing team</span></td><td>فريق منظّم نفسه بنفسه</td></tr>
+<tr><td><span class="en">Well-structured architectures</span></td><td>معماريات منظمة كويس</td></tr>
+<tr><td><span class="en">Solid designs</span></td><td>تصميمات متينة</td></tr>
+<tr><td><span class="en">Introspectively</span></td><td>مراجعة النفس</td></tr>
+<tr><td><span class="en">Become more effective</span></td><td>يبقى أكفأ</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">Nested Subqueries</span></h2>
+<h2 class="sec"><span class="en">Scrum Framework</span> – إطار <span class="en">Scrum</span></h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">Nested subquery</span></td><td>استعلام داخل استعلام</td></tr>
-<tr><td><span class="en">Nesting</span></td><td>تداخل</td></tr>
-<tr><td><span class="en">Set membership</span></td><td>العضوية في مجموعة</td></tr>
-<tr><td><span class="en">in / not in</span></td><td>موجود في / مش موجود في</td></tr>
-<tr><td><span class="en">Set comparison</span></td><td>مقارنة مع مجموعة</td></tr>
-<tr><td><span class="en">some</span></td><td>واحد على الأقل</td></tr>
-<tr><td><span class="en">all</span></td><td>كل العناصر</td></tr>
-<tr><td><span class="en">At least one</span></td><td>واحد على الأقل</td></tr>
-<tr><td><span class="en">Greater than all</span></td><td>أكبر من الكل</td></tr>
-<tr><td><span class="en">(= some) ≡ in</span></td><td>يساوي <span class="en">some</span> هي نفسها <span class="en">in</span></td></tr>
-<tr><td><span class="en">(≠ all) ≡ not in</span></td><td>≠ <span class="en">all</span> هي نفسها <span class="en">not in</span></td></tr>
-<tr><td><span class="en">exists / not exists</span></td><td>فيه / مفيش (<span class="en">subquery</span> فيها صفوف ولا لأ)</td></tr>
-<tr><td><span class="en">Nonempty</span></td><td>مش فاضية</td></tr>
-<tr><td><span class="en">Empty relation</span></td><td>علاقة فاضية</td></tr>
-<tr><td><span class="en">Correlated subquery</span></td><td>استعلام داخلي بيعتمد على الخارجي</td></tr>
-<tr><td><span class="en">Outer query / Inner query</span></td><td>الاستعلام الخارجي / الداخلي</td></tr>
-<tr><td><span class="en">unique</span></td><td>مفيش تكرار في النتيجة</td></tr>
-<tr><td><span class="en">At most once</span></td><td>مرة واحدة على الأكتر</td></tr>
-<tr><td><span class="en">Subquery in the from clause</span></td><td>استعلام فرعي جوه <span class="en">from</span></td></tr>
-<tr><td><span class="en">with clause</span></td><td>تعريف علاقة مؤقتة</td></tr>
-<tr><td><span class="en">Temporary relation</span></td><td>علاقة مؤقتة</td></tr>
-<tr><td><span class="en">Available only to the query</span></td><td>متاحة للاستعلام ده بس</td></tr>
-<tr><td><span class="en">Complex queries</span></td><td>استعلامات معقدة</td></tr>
-<tr><td><span class="en">Scalar subquery</span></td><td>استعلام بيرجّع قيمة واحدة</td></tr>
-<tr><td><span class="en">Single value is expected</span></td><td>متوقع قيمة واحدة</td></tr>
-<tr><td><span class="en">Runtime error</span></td><td>خطأ وقت التشغيل</td></tr>
+<tr><td><span class="en">Scrum</span></td><td>سكرم: إطار عمل رشيق</td></tr>
+<tr><td><span class="en">Product backlog</span></td><td>قائمة متطلبات المنتج (بالأولويات)</td></tr>
+<tr><td><span class="en">Prioritized product features</span></td><td>مميزات المنتج مرتبة حسب الأولوية</td></tr>
+<tr><td><span class="en">Sprint</span></td><td>دورة تطوير قصيرة (حوالي 30 يوم)</td></tr>
+<tr><td><span class="en">Sprint backlog</span></td><td>المهام المخصصة للـ <span class="en">sprint</span></td></tr>
+<tr><td><span class="en">Features assigned to sprint</span></td><td>مميزات متوزعة على الـ <span class="en">sprint</span></td></tr>
+<tr><td><span class="en">Backlog items are expanded</span></td><td>عناصر الـ <span class="en">backlog</span> بتتفصّل</td></tr>
+<tr><td><span class="en">Daily Scrum Meeting</span></td><td>اجتماع يومي (15 دقيقة كحد أقصى)</td></tr>
+<tr><td><span class="en">Team members synchronize their activities</span></td><td>أعضاء الفريق بينسقوا أنشطتهم</td></tr>
+<tr><td><span class="en">Backlog Refinement Meeting</span></td><td>اجتماع تنقيح الـ <span class="en">backlog</span></td></tr>
+<tr><td><span class="en">Product owner</span></td><td>مالك المنتج: بيحدد الأولويات</td></tr>
+<tr><td><span class="en">Sprint Planning Meeting</span></td><td>اجتماع تخطيط الـ <span class="en">sprint</span></td></tr>
+<tr><td><span class="en">Backlog partitioned into sprints</span></td><td>الـ <span class="en">backlog</span> متقسم على <span class="en">sprints</span></td></tr>
+<tr><td><span class="en">Sprint Review</span></td><td>مراجعة الـ <span class="en">sprint</span>: عرض الـ <span class="en">demos</span> للأطراف المعنية</td></tr>
+<tr><td><span class="en">Demo</span></td><td>عرض تجريبي</td></tr>
+<tr><td><span class="en">Approval or rejection</span></td><td>موافقة أو رفض</td></tr>
+<tr><td><span class="en">Sprint Retrospective</span></td><td>استعراض الـ <span class="en">sprint</span>: إيه اللي نجح وإيه محتاج تحسين</td></tr>
+<tr><td><span class="en">What went well / needs improvement</span></td><td>إيه اللي كان كويس / محتاج تحسين</td></tr>
+<tr><td><span class="en">Team owns decision making</span></td><td>الفريق هو اللي بياخد القرارات</td></tr>
+<tr><td><span class="en">Lightweight documentation</span></td><td>توثيق خفيف</td></tr>
+<tr><td><span class="en">Supports frequent updating</span></td><td>بيدعم التحديث المتكرر</td></tr>
+<tr><td><span class="en">Difficult to control the cost of changes</span></td><td>صعب تتحكم في تكلفة التغييرات</td></tr>
+<tr><td><span class="en">May not be suitable for large teams</span></td><td>ممكن ميناسبش الفرق الكبيرة</td></tr>
+<tr><td><span class="en">Requires expert team members</span></td><td>محتاج أعضاء فريق خبرة</td></tr>
 </table></div>
-<h2 class="sec"><span class="en">Modification of the Database</span></h2>
+<h2 class="sec"><span class="en">Extreme Programming</span> (<span class="en">XP</span>) – البرمجة المتطرفة</h2>
 <div class="tw"><table>
 <tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
-<tr><td><span class="en">Modification of the database</span></td><td>تعديل قاعدة البيانات</td></tr>
-<tr><td><span class="en">Deletion</span></td><td>مسح</td></tr>
-<tr><td><span class="en">Insertion</span></td><td>إضافة</td></tr>
-<tr><td><span class="en">Updating</span></td><td>تحديث</td></tr>
-<tr><td><span class="en">Associated with</span></td><td>مرتبط بـ</td></tr>
-<tr><td><span class="en">Located in</span></td><td>موجود في</td></tr>
-<tr><td><span class="en">Less than the average</span></td><td>أقل من المتوسط</td></tr>
-<tr><td><span class="en">Recompute / Retesting</span></td><td>إعادة الحساب / إعادة الفحص</td></tr>
-<tr><td><span class="en">Compute first, then delete</span></td><td>احسب الأول وبعدين امسح (من غير ما تعيد الحساب)</td></tr>
-<tr><td><span class="en">insert into … select</span></td><td>إضافة نتيجة استعلام لجدول</td></tr>
-<tr><td><span class="en">Evaluated fully before inserting</span></td><td>بيتنفذ بالكامل قبل الإضافة</td></tr>
-<tr><td><span class="en">update … set</span></td><td>تحديث قيمة</td></tr>
-<tr><td><span class="en">Salary raise</span></td><td>زيادة مرتب</td></tr>
-<tr><td><span class="en">Order is important</span></td><td>الترتيب مهم</td></tr>
-<tr><td><span class="en">case statement</span></td><td>جملة شرطية (<span class="en">when / then / else / end</span>)</td></tr>
-<tr><td><span class="en">Conditional updates</span></td><td>تحديثات بشرط</td></tr>
-<tr><td><span class="en">Sum of credits</span></td><td>مجموع الساعات المعتمدة</td></tr>
-<tr><td><span class="en">Students who have not taken any course</span></td><td>طلاب مخدوش أي كورس</td></tr>
+<tr><td><span class="en">Extreme Programming (XP)</span></td><td>البرمجة المتطرفة: إطار رشيق</td></tr>
+<tr><td><span class="en">User stories</span></td><td>قصص المستخدم: وصف قصير لمتطلب من وجهة نظر المستخدم</td></tr>
+<tr><td><span class="en">Values</span></td><td>القيم</td></tr>
+<tr><td><span class="en">Acceptance test criteria</span></td><td>معايير اختبار القبول</td></tr>
+<tr><td><span class="en">Iteration plan</span></td><td>خطة التكرار</td></tr>
+<tr><td><span class="en">Team estimates cost</span></td><td>الفريق بيقدّر التكلفة</td></tr>
+<tr><td><span class="en">Grouped into increments</span></td><td>بتتجمّع في <span class="en">increments</span></td></tr>
+<tr><td><span class="en">Commitment on delivery date</span></td><td>التزام بموعد التسليم</td></tr>
+<tr><td><span class="en">Project velocity</span></td><td>سرعة المشروع: كمية الشغل المنجز في كل <span class="en">iteration</span></td></tr>
+<tr><td><span class="en">Compute project velocity</span></td><td>يحسب سرعة المشروع</td></tr>
+<tr><td><span class="en">Simple design</span></td><td>تصميم بسيط</td></tr>
+<tr><td><span class="en">KIS principle (Keep It Simple)</span></td><td>مبدأ خليها بسيطة</td></tr>
+<tr><td><span class="en">CRC card</span></td><td>بطاقة <span class="en">CRC</span> (<span class="en">Class-Responsibility-Collaborator</span>)</td></tr>
+<tr><td><span class="en">Spike solutions</span></td><td>حلول تجريبية سريعة لمشكلة صعبة (<span class="en">spike</span>)</td></tr>
+<tr><td><span class="en">Design prototypes</span></td><td>نماذج أولية للتصميم</td></tr>
+<tr><td><span class="en">Refactoring</span></td><td>إعادة هيكلة الكود من غير ما نغيّر سلوكه</td></tr>
+<tr><td><span class="en">Pair programming</span></td><td>برمجة زوجية: اتنين مبرمجين على جهاز واحد</td></tr>
+<tr><td><span class="en">Unit test</span></td><td>اختبار وحدة</td></tr>
+<tr><td><span class="en">Construct unit tests before coding</span></td><td>نكتب اختبارات الوحدة قبل الكود</td></tr>
+<tr><td><span class="en">Continuous integration</span></td><td>دمج مستمر</td></tr>
+<tr><td><span class="en">Acceptance tests defined by the customer</span></td><td>اختبارات القبول بيحددها العميل</td></tr>
+<tr><td><span class="en">Release</span></td><td>إصدار / يطلق</td></tr>
+<tr><td><span class="en">Emphasizes customer involvement</span></td><td>بيركّز على مشاركة العميل</td></tr>
+<tr><td><span class="en">Rational plans</span></td><td>خطط منطقية</td></tr>
+<tr><td><span class="en">High developer commitment</span></td><td>التزام عالي من المطورين</td></tr>
+<tr><td><span class="en">Requires frequent meetings</span></td><td>محتاج اجتماعات متكررة</td></tr>
+<tr><td><span class="en">Allows for excessive changes</span></td><td>بيسمح بتغييرات كتير زيادة</td></tr>
+<tr><td><span class="en">Depends on highly skilled team members</span></td><td>معتمد على فريق مهاراته عالية</td></tr>
+</table></div>
+<h2 class="sec"><span class="en">Kanban Framework</span> – إطار <span class="en">Kanban</span></h2>
+<div class="tw"><table>
+<tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
+<tr><td><span class="en">Kanban</span></td><td>كانبان: لوحة لتتبع سير العمل</td></tr>
+<tr><td><span class="en">Kanban board</span></td><td>لوحة كانبان</td></tr>
+<tr><td><span class="en">Verticals (columns)</span></td><td>أعمدة</td></tr>
+<tr><td><span class="en">Backlog</span></td><td>قائمة المهام المنتظرة</td></tr>
+<tr><td><span class="en">Selected</span></td><td>المهام المختارة</td></tr>
+<tr><td><span class="en">Analysis</span></td><td>التحليل</td></tr>
+<tr><td><span class="en">Done</span></td><td>تم الانتهاء</td></tr>
+<tr><td><span class="en">Left to right</span></td><td>من الشمال لليمين</td></tr>
+<tr><td><span class="en">Expedite lane</span></td><td>مسار سريع للمهام العاجلة</td></tr>
+<tr><td><span class="en">Visualizing workflow</span></td><td>تصوير سير العمل</td></tr>
+<tr><td><span class="en">Work in progress (WIP)</span></td><td>الشغل الجاري</td></tr>
+<tr><td><span class="en">Limiting work in progress</span></td><td>تحديد كمية الشغل الجاري</td></tr>
+<tr><td><span class="en">At any given time</span></td><td>في أي وقت معين</td></tr>
+<tr><td><span class="en">Reduce waste</span></td><td>تقليل الهدر</td></tr>
+<tr><td><span class="en">Value flow</span></td><td>تدفق القيمة</td></tr>
+<tr><td><span class="en">Process policies</span></td><td>سياسات العملية</td></tr>
+<tr><td><span class="en">Make policies explicit</span></td><td>نخلّي السياسات صريحة</td></tr>
+<tr><td><span class="en">Criteria used to define done</span></td><td>معايير تعريف إن المهمة خلصت</td></tr>
+<tr><td><span class="en">Feedback loops</span></td><td>حلقات تغذية راجعة</td></tr>
+<tr><td><span class="en">Continuous improvement</span></td><td>تحسين مستمر</td></tr>
+<tr><td><span class="en">Collaboratively</span></td><td>بشكل تعاوني</td></tr>
+<tr><td><span class="en">Lower budget and time requirements</span></td><td>ميزانية ووقت أقل</td></tr>
+<tr><td><span class="en">Allows early product delivery</span></td><td>بيسمح بتسليم مبكر للمنتج</td></tr>
+<tr><td><span class="en">Team collaboration skills determine success</span></td><td>مهارات التعاون في الفريق بتحدد النجاح</td></tr>
+<tr><td><span class="en">Poor business analysis can doom the project</span></td><td>تحليل أعمال ضعيف ممكن يدمّر المشروع</td></tr>
+<tr><td><span class="en">Flexibility can cause developers to lose focus</span></td><td>المرونة ممكن تخلي المطورين يفقدوا التركيز</td></tr>
+</table></div>
+<h2 class="sec"><span class="en">DevOps</span> – ديف أوبس</h2>
+<div class="tw"><table>
+<tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
+<tr><td><span class="en">DevOps</span></td><td>دمج التطوير (<span class="en">Dev</span>) والعمليات (<span class="en">Ops</span>)</td></tr>
+<tr><td><span class="en">Plan, Code, Build, Test</span></td><td>خطّط، اكتب الكود، ابني، اختبر</td></tr>
+<tr><td><span class="en">Deploy, Operate, Monitor</span></td><td>انشر، شغّل، راقب</td></tr>
+<tr><td><span class="en">Continuous development</span></td><td>تطوير مستمر: السوفت وير بيتسلّم على <span class="en">sprints</span></td></tr>
+<tr><td><span class="en">Continuous testing</span></td><td>اختبار مستمر: اختبار آلي</td></tr>
+<tr><td><span class="en">Automated testing tools</span></td><td>أدوات اختبار آلي</td></tr>
+<tr><td><span class="en">Continuous deployment</span></td><td>نشر مستمر</td></tr>
+<tr><td><span class="en">Production environment</span></td><td>بيئة الإنتاج (اللي المستخدمين بيستخدموها فعلاً)</td></tr>
+<tr><td><span class="en">Continuous monitoring</span></td><td>مراقبة مستمرة</td></tr>
+<tr><td><span class="en">Operations staff</span></td><td>فريق العمليات</td></tr>
+<tr><td><span class="en">Proactively monitor</span></td><td>يراقب بشكل استباقي</td></tr>
+<tr><td><span class="en">Performance in production</span></td><td>الأداء في بيئة الإنتاج</td></tr>
+<tr><td><span class="en">Reduced time to code deployment</span></td><td>وقت أقل لنشر الكود</td></tr>
+<tr><td><span class="en">End-to-end project ownership</span></td><td>ملكية المشروع من الأول للآخر</td></tr>
+<tr><td><span class="en">Pressure to work on both old and new code</span></td><td>ضغط للشغل على كود قديم وجديد مع بعض</td></tr>
+<tr><td><span class="en">Heavy reliance on automated tools</span></td><td>اعتماد كبير على أدوات آلية</td></tr>
+<tr><td><span class="en">Deployment may affect the production environment</span></td><td>النشر ممكن يأثر على بيئة الإنتاج</td></tr>
+</table></div>
+<h2 class="sec"><span class="en">Requirements Engineering</span> – هندسة المتطلبات</h2>
+<div class="tw"><table>
+<tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
+<tr><td><span class="en">Requirements engineering</span></td><td>هندسة المتطلبات</td></tr>
+<tr><td><span class="en">Requirement</span></td><td>متطلب</td></tr>
+<tr><td><span class="en">Services the customer requires</span></td><td>الخدمات اللي العميل محتاجها</td></tr>
+<tr><td><span class="en">Constraints</span></td><td>القيود</td></tr>
+<tr><td><span class="en">Operates and is developed</span></td><td>بيشتغل وبيتطور</td></tr>
+<tr><td><span class="en">Generated during the process</span></td><td>ناتجة أثناء العملية</td></tr>
+<tr><td><span class="en">High-level abstract statement</span></td><td>جملة عامة مجرّدة</td></tr>
+<tr><td><span class="en">Detailed mathematical functional specification</span></td><td>توصيف وظيفي رياضي مفصّل</td></tr>
+<tr><td><span class="en">Dual function</span></td><td>وظيفة مزدوجة</td></tr>
+<tr><td><span class="en">Basis for a bid for a contract</span></td><td>أساس لتقديم عرض على عقد</td></tr>
+<tr><td><span class="en">Open to interpretation</span></td><td>مفتوح للتفسير</td></tr>
+<tr><td><span class="en">Basis for the contract itself</span></td><td>أساس للعقد نفسه</td></tr>
+<tr><td><span class="en">Defined in detail</span></td><td>متعرّف بالتفصيل</td></tr>
+<tr><td><span class="en">Contractor</span></td><td>المقاول / المنفّذ</td></tr>
+<tr><td><span class="en">Client</span></td><td>العميل</td></tr>
+<tr><td><span class="en">User requirements</span></td><td>متطلبات المستخدم: بلغة طبيعية ورسومات، مكتوبة للعملاء</td></tr>
+<tr><td><span class="en">Natural language</span></td><td>اللغة الطبيعية</td></tr>
+<tr><td><span class="en">System requirements</span></td><td>متطلبات النظام: وثيقة منظّمة بتفاصيل الوظائف والخدمات</td></tr>
+<tr><td><span class="en">Structured document</span></td><td>وثيقة منظّمة</td></tr>
+<tr><td><span class="en">Operational constraints</span></td><td>قيود تشغيلية</td></tr>
+<tr><td><span class="en">What should be implemented</span></td><td>اللي لازم يتنفّذ</td></tr>
+<tr><td><span class="en">Requirements readers</span></td><td>قرّاء المتطلبات</td></tr>
+</table></div>
+<h2 class="sec"><span class="en">Functional vs Non-Functional Requirements</span> – المتطلبات الوظيفية وغير الوظيفية</h2>
+<div class="tw"><table>
+<tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
+<tr><td><span class="en">Functional requirements</span></td><td>متطلبات وظيفية: الخدمات اللي النظام لازم يقدمها</td></tr>
+<tr><td><span class="en">React to particular inputs</span></td><td>يتفاعل مع مدخلات معينة</td></tr>
+<tr><td><span class="en">Behave in particular situations</span></td><td>يتصرف في مواقف معينة</td></tr>
+<tr><td><span class="en">Non-functional requirements</span></td><td>متطلبات غير وظيفية: قيود على الخدمات أو الوظائف</td></tr>
+<tr><td><span class="en">Timing constraints</span></td><td>قيود زمنية</td></tr>
+<tr><td><span class="en">Constraints on the development process</span></td><td>قيود على عملية التطوير</td></tr>
+<tr><td><span class="en">Standards</span></td><td>معايير</td></tr>
+<tr><td><span class="en">System properties</span></td><td>خصائص النظام</td></tr>
+<tr><td><span class="en">Response time</span></td><td>زمن الاستجابة</td></tr>
+<tr><td><span class="en">Storage requirements</span></td><td>متطلبات التخزين</td></tr>
+<tr><td><span class="en">I/O device capability</span></td><td>قدرة أجهزة الإدخال والإخراج</td></tr>
+<tr><td><span class="en">System representations</span></td><td>تمثيلات / صيغ النظام</td></tr>
+<tr><td><span class="en">Process requirements</span></td><td>متطلبات العملية</td></tr>
+<tr><td><span class="en">Mandating a particular CASE system</span></td><td>فرض أداة <span class="en">CASE</span> معينة</td></tr>
+<tr><td><span class="en">More critical than functional requirements</span></td><td>أهم من المتطلبات الوظيفية</td></tr>
+<tr><td><span class="en">The system is useless</span></td><td>النظام يبقى مالوش لازمة</td></tr>
+<tr><td><span class="en">Depend on type of software and expected users</span></td><td>بتعتمد على نوع السوفت وير والمستخدمين المتوقعين</td></tr>
+<tr><td><span class="en">Library system</span></td><td>نظام مكتبة</td></tr>
+<tr><td><span class="en">LIBSYS</span></td><td>نظام مكتبة بيدّي واجهة واحدة لقواعد بيانات مقالات كتير</td></tr>
+<tr><td><span class="en">Search, download and print</span></td><td>بحث وتنزيل وطباعة</td></tr>
+<tr><td><span class="en">Personal study</span></td><td>دراسة شخصية</td></tr>
+<tr><td><span class="en">Initial set of databases</span></td><td>المجموعة الأولية لقواعد البيانات</td></tr>
+<tr><td><span class="en">Subset</span></td><td>مجموعة فرعية</td></tr>
+<tr><td><span class="en">Viewers</span></td><td>عارضات (برامج عرض المستندات)</td></tr>
+<tr><td><span class="en">Document store</span></td><td>مخزن المستندات</td></tr>
+<tr><td><span class="en">Unique identifier</span></td><td>معرّف فريد</td></tr>
+<tr><td><span class="en">Shall</span></td><td>لازم (كلمة بتتكتب في المتطلبات يعني إلزامي)</td></tr>
+<tr><td><span class="en">Permanent storage area</span></td><td>مساحة تخزين دائمة</td></tr>
+</table></div>
+<h2 class="sec"><span class="en">Requirements Problems</span> – مشاكل المتطلبات</h2>
+<div class="tw"><table>
+<tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
+<tr><td><span class="en">Imprecision</span></td><td>عدم الدقة</td></tr>
+<tr><td><span class="en">Not precisely stated</span></td><td>مش متحددة بدقة</td></tr>
+<tr><td><span class="en">Ambiguous requirements</span></td><td>متطلبات غامضة</td></tr>
+<tr><td><span class="en">Interpreted in different ways</span></td><td>بتتفسّر بطرق مختلفة</td></tr>
+<tr><td><span class="en">User intention</span></td><td>قصد المستخدم</td></tr>
+<tr><td><span class="en">Developer interpretation</span></td><td>تفسير المطوّر</td></tr>
+<tr><td><span class="en">Special purpose viewer</span></td><td>عارض لغرض خاص</td></tr>
+<tr><td><span class="en">Text viewer</span></td><td>عارض نصوص</td></tr>
+<tr><td><span class="en">Completeness</span></td><td>الاكتمال: كل الإمكانيات المطلوبة متوصّفة</td></tr>
+<tr><td><span class="en">Consistency</span></td><td>الاتساق: مفيش تناقض</td></tr>
+<tr><td><span class="en">Conflicts or contradictions</span></td><td>تعارضات أو تناقضات</td></tr>
+<tr><td><span class="en">Facilities</span></td><td>إمكانيات / خدمات</td></tr>
+<tr><td><span class="en">In principle / In practice</span></td><td>من الناحية النظرية / من الناحية العملية</td></tr>
+<tr><td><span class="en">Impossible to produce</span></td><td>مستحيل تنتج</td></tr>
+</table></div>
+<h2 class="sec"><span class="en">Non-Functional Classifications</span> – تصنيف المتطلبات غير الوظيفية</h2>
+<div class="tw"><table>
+<tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
+<tr><td><span class="en">Product requirements</span></td><td>متطلبات المنتج: إزاي المنتج لازم يتصرف</td></tr>
+<tr><td><span class="en">Execution speed</span></td><td>سرعة التنفيذ</td></tr>
+<tr><td><span class="en">Organisational requirements</span></td><td>متطلبات تنظيمية: من سياسات وإجراءات المؤسسة</td></tr>
+<tr><td><span class="en">Organisational policies and procedures</span></td><td>سياسات وإجراءات المؤسسة</td></tr>
+<tr><td><span class="en">Process standards</span></td><td>معايير العملية</td></tr>
+<tr><td><span class="en">Implementation requirements</span></td><td>متطلبات التنفيذ</td></tr>
+<tr><td><span class="en">External requirements</span></td><td>متطلبات خارجية: من عوامل برّه النظام</td></tr>
+<tr><td><span class="en">Factors external to the system</span></td><td>عوامل خارجية عن النظام</td></tr>
+<tr><td><span class="en">Interoperability</span></td><td>التشغيل البيني مع أنظمة تانية</td></tr>
+<tr><td><span class="en">Legislative requirements</span></td><td>متطلبات تشريعية (قوانين)</td></tr>
+<tr><td><span class="en">Space</span></td><td>المساحة</td></tr>
+<tr><td><span class="en">Usability</span></td><td>سهولة الاستخدام</td></tr>
+<tr><td><span class="en">Portability</span></td><td>قابلية النقل لمنصات مختلفة</td></tr>
+<tr><td><span class="en">Delivery</span></td><td>التسليم</td></tr>
+<tr><td><span class="en">Implementation</span></td><td>التنفيذ</td></tr>
+<tr><td><span class="en">Ethical</span></td><td>أخلاقية</td></tr>
+<tr><td><span class="en">Safety</span></td><td>السلامة</td></tr>
+<tr><td><span class="en">Privacy</span></td><td>الخصوصية</td></tr>
+<tr><td><span class="en">HTML without frames or Java applets</span></td><td><span class="en">HTML</span> بسيط من غير <span class="en">frames</span> أو <span class="en">Java applets</span></td></tr>
+<tr><td><span class="en">Deliverable documents</span></td><td>المستندات المسلَّمة</td></tr>
+<tr><td><span class="en">Disclose personal information</span></td><td>يكشف معلومات شخصية</td></tr>
+<tr><td><span class="en">Reference number</span></td><td>رقم مرجعي</td></tr>
+<tr><td><span class="en">Operators of the system</span></td><td>مشغّلو النظام</td></tr>
+</table></div>
+<h2 class="sec"><span class="en">Goals</span> &amp; <span class="en">Measurable Requirements</span> – الأهداف والمتطلبات القابلة للقياس</h2>
+<div class="tw"><table>
+<tr><th>المصطلح</th><th>المعنى بالعربي</th></tr>
+<tr><td><span class="en">Goal</span></td><td>هدف: نية عامة للمستخدم زي سهولة الاستخدام</td></tr>
+<tr><td><span class="en">General intention of the user</span></td><td>نية عامة للمستخدم</td></tr>
+<tr><td><span class="en">Ease of use</span></td><td>سهولة الاستخدام</td></tr>
+<tr><td><span class="en">Verifiable non-functional requirement</span></td><td>متطلب غير وظيفي ممكن التحقق منه</td></tr>
+<tr><td><span class="en">Statement using a measure</span></td><td>جملة بتستخدم مقياس</td></tr>
+<tr><td><span class="en">Objectively tested</span></td><td>ممكن يتختبر بموضوعية</td></tr>
+<tr><td><span class="en">Difficult to verify</span></td><td>صعب التحقق منه</td></tr>
+<tr><td><span class="en">Experienced controllers</span></td><td>مشغّلين خبرة</td></tr>
+<tr><td><span class="en">User errors are minimised</span></td><td>أخطاء المستخدم تتقلل لأقل حد</td></tr>
+<tr><td><span class="en">Average number of errors</span></td><td>متوسط عدد الأخطاء</td></tr>
+<tr><td><span class="en">Training time</span></td><td>وقت التدريب</td></tr>
+<tr><td><span class="en">Requirements measures</span></td><td>مقاييس المتطلبات</td></tr>
+<tr><td><span class="en">Property / Measure</span></td><td>الخاصية / المقياس</td></tr>
+<tr><td><span class="en">Speed</span></td><td>السرعة</td></tr>
+<tr><td><span class="en">Processed transactions/second</span></td><td>معاملات بتتعالج في الثانية</td></tr>
+<tr><td><span class="en">User / Event response time</span></td><td>زمن استجابة المستخدم / الحدث</td></tr>
+<tr><td><span class="en">Screen refresh time</span></td><td>زمن تحديث الشاشة</td></tr>
+<tr><td><span class="en">Size (M Bytes, number of ROM chips)</span></td><td>الحجم (ميجابايت، عدد شرايح <span class="en">ROM</span>)</td></tr>
+<tr><td><span class="en">Number of help frames</span></td><td>عدد شاشات المساعدة</td></tr>
+<tr><td><span class="en">Mean time to failure (MTTF)</span></td><td>متوسط الزمن حتى حدوث عطل</td></tr>
+<tr><td><span class="en">Probability of unavailability</span></td><td>احتمال عدم التوفر</td></tr>
+<tr><td><span class="en">Rate of failure occurrence</span></td><td>معدل حدوث الأعطال</td></tr>
+<tr><td><span class="en">Availability</span></td><td>التوفر (إن النظام شغال)</td></tr>
+<tr><td><span class="en">Robustness</span></td><td>المتانة: تحمّل الأعطال</td></tr>
+<tr><td><span class="en">Time to restart after failure</span></td><td>وقت إعادة التشغيل بعد العطل</td></tr>
+<tr><td><span class="en">Percentage of events causing failure</span></td><td>نسبة الأحداث اللي بتسبب عطل</td></tr>
+<tr><td><span class="en">Probability of data corruption on failure</span></td><td>احتمال فساد البيانات عند العطل</td></tr>
+<tr><td><span class="en">Percentage of target-dependent statements</span></td><td>نسبة الجمل المعتمدة على منصة معينة</td></tr>
+<tr><td><span class="en">Number of target systems</span></td><td>عدد الأنظمة المستهدفة</td></tr>
 </table></div>
 <div class="sp"></div>
 </div>
@@ -1017,11 +1260,11 @@ li[dir=ltr]{text-align:left}
       <div class="cin-valance"></div>
       <div class="cin-curtain l"></div><div class="cin-curtain r"></div>
       <div class="cin-frame">
-        <div class="cin-duo"><div class="cin-screen act" id="cin-screen"><div class="cin-empty">🎬<br>الفيديو هيتضاف قريباً</div></div><div class="cin-screen" id="cin-screen2"><div class="cin-empty">🎬<br>الفيديو هيتضاف قريباً</div></div></div>
+        <div class="cin-duo"><div class="cin-screen act" id="cin-screen"><div class="cin-empty">🎬<br>الفيديو هيتضاف قريباً</div></div></div>
       </div>
       <div class="cin-stagefloor"></div>
     </div>
-    <div class="cin-pick" id="cin-pick"><button type="button" data-i="0" class="on">🎬 الفيديو 1</button><button type="button" data-i="1">🎬 الفيديو 2</button></div>
+
     <div class="cin-beam"></div>
     <div class="cin-dusts"></div>
     <div class="cin-seats"></div>
@@ -1621,13 +1864,8 @@ function cinMake(sc,enc){
     else if(a==='fs'){var d=document;if(d.fullscreenElement||d.webkitFullscreenElement){(d.exitFullscreen||d.webkitExitFullscreen).call(d)}else{(sc.requestFullscreen||sc.webkitRequestFullscreen).call(sc)}}
   });
 }
-cinMake(document.getElementById('cin-screen'),'c3lkckJNLXlPZ20=');
-cinMake(document.getElementById('cin-screen2'),'Y1NYS2p2N3Foa2g=');
-(function(){var pk=document.getElementById('cin-pick');if(!pk)return;var scr=[document.getElementById('cin-screen'),document.getElementById('cin-screen2')];
-  pk.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var i=+b.dataset.i;
-    scr.forEach(function(s,k){if(k!==i&&s._pause)s._pause();s.classList.toggle('act',k===i)});
-    [].forEach.call(pk.children,function(x,k){x.classList.toggle('on',k===i)});
-    window.dispatchEvent(new Event('resize'))})})();
+cinMake(document.getElementById('cin-screen'),'b0RjQUp2czFMcEQ=');
+
 
 (function(){var r=document.getElementById('cin-report'),j=document.getElementById('cin-joke'),b=document.getElementById('cin-back');if(!r)return;
   r.addEventListener('click',function(){j.hidden=false;r.setAttribute('aria-expanded','true');j.scrollIntoView({block:'nearest',behavior:'smooth'})});
